@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsible_Payer_FOAPAL</fullName>
+    <active>true</active>
+    <description>When Responsible Payer is FOAPAL, then FOAPAL is required.</description>
+    <errorConditionFormula>TEXT( Responsible_Payer__c ) = &quot;FOAPAL&quot; &amp;&amp;
+ISBLANK( FOAPAL__c )</errorConditionFormula>
+    <errorMessage>When Responsible Payer is FOAPAL, then FOAPAL is required.</errorMessage>
+</ValidationRule>

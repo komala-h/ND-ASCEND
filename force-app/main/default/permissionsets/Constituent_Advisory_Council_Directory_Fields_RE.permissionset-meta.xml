@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>RE to Activities/Affiliations and Awards &amp; Honors</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.ND_Activities_Affiliations__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.ND_Awards_Honors__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Constituent-Advisory Council Directory Fields-RE</label>
+</PermissionSet>

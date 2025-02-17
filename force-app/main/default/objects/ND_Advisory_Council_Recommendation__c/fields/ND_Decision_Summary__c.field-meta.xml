@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Decision_Summary__c</fullName>
+    <description>Tracks the decision summary/notes for the nomination/renewal</description>
+    <inlineHelpText>For use by Advisory Council program staff only - notes from the annual membership review with Council leader(s) &amp; UR/AC leadership.</inlineHelpText>
+    <label>Decision Summary</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

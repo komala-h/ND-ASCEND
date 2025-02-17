@@ -1,0 +1,39 @@
+<template>
+    <template if:true={showLoadingSpinner}>
+        <div style="z-index: 10000 !important;">
+            <lightning-spinner alternative-text="Uploading......" size="medium" style="z-index: 10000 !important;"></lightning-spinner>
+        </div>
+    </template>
+
+
+    <lightning-card title="Mass Upload Campaign Appeals CSV File">
+        <lightning-button  icon-name="action:download"  name="Download" label="Download (Sample template)" slot="actions" onclick={downloadCSV}> </lightning-button>
+        
+        <div style="margin-left:4%; margin:0px auto; width: 300px;">
+        <!--<lightning-file-upload
+            label=""
+            name="file Uploader"
+            accept=".csv"
+            onuploadfinished={handleFilesChange}            
+        ></lightning-file-upload>
+        </lightning-file-upload>-->
+            <div>
+                <lightning-input accept='.csv' label="" name="file uploader" onchange ={handleFilesChange} type="file" multiple></lightning-input>
+            </div> 
+    
+            <br/>
+            <div class="slds-text-body_small slds-text-color_error">{fileName}
+
+
+            </div><br/>
+            <div>
+                <lightning-button class="slds-m-top--medium" label={UploadFile} onclick={handleSave} variant="brand" disabled={isTrue}></lightning-button>
+            </div>
+        </div><br/><br/>
+
+
+    </lightning-card>
+    
+
+
+</template>

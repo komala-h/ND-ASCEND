@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Request_Compact</fullName>
+    <fields>Donor__c</fields>
+    <fields>Event__c</fields>
+    <fields>nd_ID_and_Inst_Suffix__c</fields>
+    <fields>Preferred_Email__c</fields>
+    <fields>Preferred_Phone__c</fields>
+    <fields>Household_Lifetime_Cash__c</fields>
+    <fields>Household_Lifetime_Production__c</fields>
+    <fields>Donor_ID__c</fields>
+    <label>Ticket Request Compact</label>
+</CompactLayout>

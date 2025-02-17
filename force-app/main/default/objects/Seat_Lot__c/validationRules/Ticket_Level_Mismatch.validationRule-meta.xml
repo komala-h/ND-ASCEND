@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Level_Mismatch</fullName>
+    <active>true</active>
+    <description>Ticket Level Event does not match the Seat&apos;s Event Lookup.</description>
+    <errorConditionFormula>Event_Lookup__c  &lt;&gt;  Ticket_Level__r.Event__c</errorConditionFormula>
+    <errorMessage>Ticket Level Event does not match the Seat&apos;s Event Lookup.</errorMessage>
+</ValidationRule>

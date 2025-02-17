@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_Membership_Division_Code__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enabling this field would require the constituent to have an active ucinn_ascendv2__Society_Membership__c record with a ucinn_ascendv2__Giving_Society__r.nd_Division_Code__c that matches with the Hard and Soft Credit record&apos;s nd_Allocation_Division_Code__c</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Enabling this field would require the constituent to have an active ucinn_ascendv2__Society_Membership__c record with a ucinn_ascendv2__Giving_Society__r.nd_Division_Code__c that matches with the Hard and Soft Credit record&apos;s nd_Allocation_Division_Code__c</inlineHelpText>
+    <label>Match Membership Division Code</label>
+    <type>Checkbox</type>
+</CustomField>

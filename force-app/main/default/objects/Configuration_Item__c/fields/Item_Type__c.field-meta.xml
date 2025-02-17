@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_Type__c</fullName>
+    <label>Item Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Action</fullName>
+                <default>false</default>
+                <label>Action</label>
+            </value>
+            <value>
+                <fullName>Action Layout</fullName>
+                <default>false</default>
+                <label>Action Layout</label>
+            </value>
+            <value>
+                <fullName>Apex Class</fullName>
+                <default>false</default>
+                <label>Apex Class</label>
+            </value>
+            <value>
+                <fullName>Apex Trigger</fullName>
+                <default>false</default>
+                <label>Apex Trigger</label>
+            </value>
+            <value>
+                <fullName>Approval Process</fullName>
+                <default>false</default>
+                <label>Approval Process</label>
+            </value>
+            <value>
+                <fullName>Approval Step</fullName>
+                <default>false</default>
+                <label>Approval Step</label>
+            </value>
+            <value>
+                <fullName>Assignment Rule</fullName>
+                <default>false</default>
+                <label>Assignment Rule</label>
+            </value>
+            <value>
+                <fullName>Aura</fullName>
+                <default>false</default>
+                <label>Aura</label>
+            </value>
+            <value>
+                <fullName>Button</fullName>
+                <default>false</default>
+                <label>Button</label>
+            </value>
+            <value>
+                <fullName>Button Override</fullName>
+                <default>false</default>
+                <label>Button Override</label>
+            </value>
+            <value>
+                <fullName>Case Assignment Rule</fullName>
+                <default>false</default>
+                <label>Case Assignment Rule</label>
+            </value>
+            <value>
+                <fullName>Case Team Member Role</fullName>
+                <default>false</default>
+                <label>Case Team Member Role</label>
+            </value>
+            <value>
+                <fullName>Compact Layout</fullName>
+                <default>false</default>
+                <label>Compact Layout</label>
+            </value>
+            <value>
+                <fullName>Compact Layout Assignment</fullName>
+                <default>false</default>
+                <label>Compact Layout Assignment</label>
+            </value>
+            <value>
+                <fullName>Contact Action</fullName>
+                <default>false</default>
+                <label>Contact Action</label>
+            </value>
+            <value>
+                <fullName>CSV Parser</fullName>
+                <default>false</default>
+                <label>CSV Parser</label>
+            </value>
+            <value>
+                <fullName>Custom Field</fullName>
+                <default>false</default>
+                <label>Custom Field</label>
+            </value>
+            <value>
+                <fullName>Custom Label</fullName>
+                <default>false</default>
+                <label>Custom Label</label>
+            </value>
+            <value>
+                <fullName>Custom Metadata Type</fullName>
+                <default>false</default>
+                <label>Custom Metadata Type</label>
+            </value>
+            <value>
+                <fullName>Custom Metadata Type Record</fullName>
+                <default>false</default>
+                <label>Custom Metadata Type Record</label>
+            </value>
+            <value>
+                <fullName>Custom Notification Type</fullName>
+                <default>false</default>
+                <label>Custom Notification Type</label>
+            </value>
+            <value>
+                <fullName>Custom Object</fullName>
+                <default>false</default>
+                <label>Custom Object</label>
+            </value>
+            <value>
+                <fullName>Custom Permission</fullName>
+                <default>false</default>
+                <label>Custom Permission</label>
+            </value>
+            <value>
+                <fullName>Custom Setting</fullName>
+                <default>false</default>
+                <label>Custom Setting</label>
+            </value>
+            <value>
+                <fullName>Custom Setting Record</fullName>
+                <default>false</default>
+                <label>Custom Setting Record</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Document</fullName>
+                <default>false</default>
+                <label>Document</label>
+            </value>
+            <value>
+                <fullName>Document Folder</fullName>
+                <default>false</default>
+                <label>Document Folder</label>
+            </value>
+            <value>
+                <fullName>Duplicate Rule</fullName>
+                <default>false</default>
+                <label>Duplicate Rule</label>
+            </value>
+            <value>
+                <fullName>Email Alert</fullName>
+                <default>false</default>
+                <label>Email Alert</label>
+            </value>
+            <value>
+                <fullName>Email Template</fullName>
+                <default>false</default>
+                <label>Email Template</label>
+            </value>
+            <value>
+                <fullName>Feed Tracking</fullName>
+                <default>false</default>
+                <label>Feed Tracking</label>
+            </value>
+            <value>
+                <fullName>Field</fullName>
+                <default>false</default>
+                <label>Field</label>
+            </value>
+            <value>
+                <fullName>Field Dependency</fullName>
+                <default>false</default>
+                <label>Field Dependency</label>
+            </value>
+            <value>
+                <fullName>Field Label Override</fullName>
+                <default>false</default>
+                <label>Field Label Override</label>
+            </value>
+            <value>
+                <fullName>Field Set</fullName>
+                <default>false</default>
+                <label>Field Set</label>
+            </value>
+            <value>
+                <fullName>Field Tracking History</fullName>
+                <default>false</default>
+                <label>Field Tracking History</label>
+            </value>
+            <value>
+                <fullName>Field Update - Workflow</fullName>
+                <default>false</default>
+                <label>Field Update - Workflow</label>
+            </value>
+            <value>
+                <fullName>Flexipage</fullName>
+                <default>false</default>
+                <label>Flexipage</label>
+            </value>
+            <value>
+                <fullName>Flow</fullName>
+                <default>false</default>
+                <label>Flow</label>
+            </value>
+            <value>
+                <fullName>Flow Definition</fullName>
+                <default>false</default>
+                <label>Flow Definition</label>
+            </value>
+            <value>
+                <fullName>Folder</fullName>
+                <default>false</default>
+                <label>Folder</label>
+            </value>
+            <value>
+                <fullName>Global Action</fullName>
+                <default>false</default>
+                <label>Global Action</label>
+            </value>
+            <value>
+                <fullName>Global Value Set</fullName>
+                <default>false</default>
+                <label>Global Value Set</label>
+            </value>
+            <value>
+                <fullName>Hierarchy Columns</fullName>
+                <default>false</default>
+                <label>Hierarchy Columns</label>
+            </value>
+            <value>
+                <fullName>Lightning Component</fullName>
+                <default>false</default>
+                <label>Lightning Component</label>
+            </value>
+            <value>
+                <fullName>Lightning Component (bundle)</fullName>
+                <default>false</default>
+                <label>Lightning Component (bundle)</label>
+            </value>
+            <value>
+                <fullName>Lightning Page</fullName>
+                <default>false</default>
+                <label>Lightning Page</label>
+            </value>
+            <value>
+                <fullName>Lightning Page Assignment</fullName>
+                <default>false</default>
+                <label>Lightning Page Assignment</label>
+            </value>
+            <value>
+                <fullName>List View</fullName>
+                <default>false</default>
+                <label>List View</label>
+            </value>
+            <value>
+                <fullName>Matching Rule</fullName>
+                <default>false</default>
+                <label>Matching Rule</label>
+            </value>
+            <value>
+                <fullName>Object</fullName>
+                <default>false</default>
+                <label>Object</label>
+            </value>
+            <value>
+                <fullName>Object Setting</fullName>
+                <default>false</default>
+                <label>Object Setting</label>
+            </value>
+            <value>
+                <fullName>Org Setting</fullName>
+                <default>false</default>
+                <label>Org Setting</label>
+            </value>
+            <value>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+                <label>Page Layout</label>
+            </value>
+            <value>
+                <fullName>Page Layout Assignment</fullName>
+                <default>false</default>
+                <label>Page Layout Assignment</label>
+            </value>
+            <value>
+                <fullName>Path</fullName>
+                <default>false</default>
+                <label>Path</label>
+            </value>
+            <value>
+                <fullName>Permission Set</fullName>
+                <default>false</default>
+                <label>Permission Set</label>
+            </value>
+            <value>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+                <label>Picklist</label>
+            </value>
+            <value>
+                <fullName>Picklist Value Set</fullName>
+                <default>false</default>
+                <label>Picklist Value Set</label>
+            </value>
+            <value>
+                <fullName>Predefined Case Team</fullName>
+                <default>false</default>
+                <label>Predefined Case Team</label>
+            </value>
+            <value>
+                <fullName>Process Builder</fullName>
+                <default>false</default>
+                <label>Process Builder</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Public Group</fullName>
+                <default>false</default>
+                <label>Public Group</label>
+            </value>
+            <value>
+                <fullName>Queue</fullName>
+                <default>false</default>
+                <label>Queue</label>
+            </value>
+            <value>
+                <fullName>Record Type</fullName>
+                <default>false</default>
+                <label>Record Type</label>
+            </value>
+            <value>
+                <fullName>Record Type Assignment</fullName>
+                <default>false</default>
+                <label>Record Type Assignment</label>
+            </value>
+            <value>
+                <fullName>Related List Label Override</fullName>
+                <default>false</default>
+                <label>Related List Label Override</label>
+            </value>
+            <value>
+                <fullName>Related List Setting</fullName>
+                <default>false</default>
+                <label>Related List Setting</label>
+            </value>
+            <value>
+                <fullName>Remote Site Setting</fullName>
+                <default>false</default>
+                <label>Remote Site Setting</label>
+            </value>
+            <value>
+                <fullName>Rename Tabs And Label</fullName>
+                <default>false</default>
+                <label>Rename Tabs And Label</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Report Type</fullName>
+                <default>false</default>
+                <label>Report Type</label>
+            </value>
+            <value>
+                <fullName>Role</fullName>
+                <default>false</default>
+                <label>Role</label>
+            </value>
+            <value>
+                <fullName>Sales Process</fullName>
+                <default>false</default>
+                <label>Sales Process</label>
+            </value>
+            <value>
+                <fullName>Scheduled Apex</fullName>
+                <default>false</default>
+                <label>Scheduled Apex</label>
+            </value>
+            <value>
+                <fullName>Search Layout</fullName>
+                <default>false</default>
+                <label>Search Layout</label>
+            </value>
+            <value>
+                <fullName>Sharing Rule</fullName>
+                <default>false</default>
+                <label>Sharing Rule</label>
+            </value>
+            <value>
+                <fullName>Sharing Setting</fullName>
+                <default>false</default>
+                <label>Sharing Setting</label>
+            </value>
+            <value>
+                <fullName>Standard Field</fullName>
+                <default>false</default>
+                <label>Standard Field</label>
+            </value>
+            <value>
+                <fullName>Standard Picklist</fullName>
+                <default>false</default>
+                <label>Standard Picklist</label>
+            </value>
+            <value>
+                <fullName>Static Resource</fullName>
+                <default>false</default>
+                <label>Static Resource</label>
+            </value>
+            <value>
+                <fullName>Support Process</fullName>
+                <default>false</default>
+                <label>Support Process</label>
+            </value>
+            <value>
+                <fullName>Tab</fullName>
+                <default>false</default>
+                <label>Tab</label>
+            </value>
+            <value>
+                <fullName>Theme and Branding</fullName>
+                <default>false</default>
+                <label>Theme and Branding</label>
+            </value>
+            <value>
+                <fullName>Track Field History</fullName>
+                <default>false</default>
+                <label>Track Field History</label>
+            </value>
+            <value>
+                <fullName>Trigger Handler Record</fullName>
+                <default>false</default>
+                <label>Trigger Handler Record</label>
+            </value>
+            <value>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+                <label>Validation Rule</label>
+            </value>
+            <value>
+                <fullName>Visualforce Component</fullName>
+                <default>false</default>
+                <label>Visualforce Component</label>
+            </value>
+            <value>
+                <fullName>Visualforce Page</fullName>
+                <default>false</default>
+                <label>Visualforce Page</label>
+            </value>
+            <value>
+                <fullName>Workflow Field Update</fullName>
+                <default>false</default>
+                <label>Workflow Field Update</label>
+            </value>
+            <value>
+                <fullName>Workflow Rule</fullName>
+                <default>false</default>
+                <label>Workflow Rule</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_PRM__c</fullName>
+    <description>For use with the My Advisory Council Recommendations list view</description>
+    <formula>ND_Constituent__r.ucinn_ascendv2__PRM__r.Id =  $User.Id</formula>
+    <label>PRM</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

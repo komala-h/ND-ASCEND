@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>highspot__ConfigurationController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>highspot__ContentController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>highspot__HighspotController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>highspot__PlaybookController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>highspot__PlaybookControllerTests</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Apex Classes required to use Highspot</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Display_for_PRM__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Highspot Apex Class Access</label>
+    <license>Salesforce</license>
+</PermissionSet>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>override_reciept_date__c</fullName>
+    <description>When a value is in this record, the nd_rtv2_processing job will use this field to set the transaction/ credit overide dates. This is mainly used at calendar year end.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>override_reciept_date</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

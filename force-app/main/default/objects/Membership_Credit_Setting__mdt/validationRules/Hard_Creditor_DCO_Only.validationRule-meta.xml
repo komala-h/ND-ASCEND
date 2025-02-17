@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hard_Creditor_DCO_Only</fullName>
+    <active>true</active>
+    <description>Validation for Hard Creditor / DCO field</description>
+    <errorConditionFormula>IF(AND(Hard_Creditor_DCO__c,OR(NOT(ISBLANK(TEXT(Related_Object__c))),NOT(ISBLANK(Object_Filter_Crtieria__c)),NOT(ISBLANK(Contact_Field__c)))), TRUE, FALSE)</errorConditionFormula>
+    <errorMessage>Related Object, Object Filter Crtieria and Contact Field cannot have a value if Hard Creditor / DCO is checked.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,40 @@
+<aura:component implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForAllPageTypes" controller="asc_MembershipLogoController" access="global" >
+	
+    <aura:attribute name="title" type="String" access="global"/>
+    <aura:attribute name="titleCssClass" type="String" access="global"/>
+    <aura:attribute name="titleIcon" type="String" access="global"/>
+    <aura:attribute name="titleIconSize" type="String" access="global"/>
+    <aura:attribute name="titleIconVariant" type="String" access="global"/>
+    <aura:attribute name="titleIconShape" type="String" access="global"/>
+
+    <aura:attribute name="membershipLogoList" type="object[]"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <force:recordData recordId="{!v.recordId}" layoutType="FULL" recordUpdated="{!c.doInit}"/>
+
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media--center">
+                <aura:if isTrue="{!v.titleIcon != null}">
+                    <div class="slds-media__figure">
+                        <lightning:icon iconName="{!v.titleIcon}" variant="{!v.titleIconVariant}" size="{!v.titleIconSize}" class="{!'slds-icon_container--' + v.titleIconShape}" />
+                    </div>
+                </aura:if>
+                <div class="slds-media__body">
+                    <span class="{!v.titleCssClass}">{!v.title == null ? 'Giving Societies' : v.title}</span>
+                </div>
+            </header>
+        </div>
+
+        <div class="slds-card__body slds-p-left_medium slds-p-right_medium slds-m-bottom_none">
+            <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="true">
+                <aura:iteration items="{!v.membershipLogoList}" var="thisLogo" aura:id="theList">
+                    <lightning:layoutItem size="4" smallDeviceSize="3" mediumDeviceSize="3" padding="horizontal-small" class="slds-p-bottom_small" flexibility="auto">
+                        <img src="{!thisLogo.url}" style="width: 3rem;" class="slds-align_absolute-center"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+        </div>
+    </article>
+</aura:component>

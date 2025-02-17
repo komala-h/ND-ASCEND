@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>integration_record_id__c</fullName>
+    <description>Used as a unique id for data integration. This field will be used as the unique id when talking with another system. As we connect multiple systems, this number will connect everything for this record. Using this instead of Salesforce&apos;s record id (as seen in the url) because that value changes when moving Salesforce instances or making a partial Salesforce copy. When migrating data to another system, this record should follow to the new system and continue to increment in the new system. By doing this, we can migrate data to a new system, but keep integrations intact.</description>
+    <externalId>false</externalId>
+    <label>integration record id</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

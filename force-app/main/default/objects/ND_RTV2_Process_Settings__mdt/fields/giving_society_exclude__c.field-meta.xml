@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>giving_society_exclude__c</fullName>
+    <description>comma separated list of giving society codes to exclude from the rtv2 hierarchy</description>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>giving_society_exclude</label>
+    <length>1500</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

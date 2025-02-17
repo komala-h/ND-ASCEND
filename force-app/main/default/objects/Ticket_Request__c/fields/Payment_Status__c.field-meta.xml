@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Status__c</fullName>
+    <label>Payment Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payment Due</fullName>
+                <default>false</default>
+                <label>Payment Due</label>
+            </value>
+            <value>
+                <fullName>Paid in Full</fullName>
+                <default>false</default>
+                <label>Paid in Full</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Donor Refused</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Donor Refused</label>
+            </value>
+            <value>
+                <fullName>Holding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Holding</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Transferred</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Transferred</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

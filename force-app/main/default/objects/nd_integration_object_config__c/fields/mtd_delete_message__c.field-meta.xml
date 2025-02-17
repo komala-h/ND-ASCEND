@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>mtd_delete_message__c</fullName>
+    <description>Holds errors that occur for this object in the talend job job_ascend_producer_custom_metadata_deletes</description>
+    <inlineHelpText>Holds errors that occur for this object in the talend job job_ascend_producer_custom_metadata_deletes</inlineHelpText>
+    <label>mtd delete message</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

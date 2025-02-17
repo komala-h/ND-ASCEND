@@ -1,0 +1,28 @@
+<aura:component controller="asc_BIO_ExtendedRelatedListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="accountOrContactRecordId" type="String"/>
+    <aura:attribute name="totalQueryOverride" type="String"/>
+    <aura:attribute name="relatedListSettingName" type="String" required="true"/>
+    <aura:attribute name="targetObjectName" type="String" required="true"/>
+    <aura:attribute name="targetAccountOrContactFieldName" type="String" required="true"/>
+    <aura:attribute name="junctionAccountOrContactFieldName" type="String" required="true"/>
+    <aura:attribute name="junctionObjectName" type="String" required="true"/>
+    <aura:attribute name="junctionLookupFieldName" type="String" required="true"/>
+    <aura:attribute name="junctionInnerQuery" type="String" default=""/>
+    <aura:attribute name="junctionInnerQueryIdFieldName" type="String" default=""/>
+    <aura:attribute name="junctionInnerIdList" type="List"/>
+    <aura:attribute name="additionalFieldsToPopulate" type="String"/>
+    <aura:attribute name="additionalFieldsToPopulateMap" type="Map" default="{}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <aura:handler event="force:showToast" action="{!c.rerenderTable}"/>    
+    
+    <aura:if isTrue="{!and(v.accountOrContactRecordId != null, v.relatedListSettingName != null)}" >
+        <ucinn_ascendv2:RelatedList recordId="{!v.accountOrContactRecordId}" 
+                                    aura:id="extendedLookupRelatedList"
+                                    outsideAscendPackage="true" 
+                                    relatedListSettingName="{!v.relatedListSettingName}"
+                                    totalQueryOverride="{!v.totalQueryOverride}"
+                                    additionalFieldsToPopulate="{!v.additionalFieldsToPopulateMap}"/>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ascend_Tab__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Ascend Tab</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Info</fullName>
+                <default>true</default>
+                <label>Additional Info</label>
+            </value>
+            <value>
+                <fullName>Address Relation</fullName>
+                <default>false</default>
+                <label>Address Relation</label>
+            </value>
+            <value>
+                <fullName>Constituent Name</fullName>
+                <default>false</default>
+                <label>Constituent Name</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>System IDs</fullName>
+                <default>false</default>
+                <label>System IDs</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

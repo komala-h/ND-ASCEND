@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_Parking_Lot_Label__c</fullName>
+    <description>For use with Parking Ticket Holders on Weekend View CMT</description>
+    <externalId>false</externalId>
+    <formula>CASE(
+TEXT(Parking_Lot__c),
+&quot;AERO&quot;, &quot;Aero&quot;,
+&quot;AL&quot;, &quot;Alumni&quot;,
+&quot;AVE&quot;, &quot;Ave&quot;,
+
+&quot;BAND&quot;, &quot;Band&quot;,
+&quot;BK&quot;, &quot;Bookstore&quot;,
+&quot;U&quot;, &quot;Bulla&quot;,
+
+&quot;B&quot;, &quot;Burke&quot;,
+&quot;BD&quot;, &quot;Burke/Dorr&quot;,
+&quot;BN&quot;, &quot;Burke North&quot;,
+
+&quot;BS&quot;, &quot;Burke South&quot;,
+&quot;CN&quot;, &quot;Cartier North&quot;,
+&quot;CS&quot;, &quot;Cartier South&quot;,
+
+&quot;LTR&quot;, &quot;DB+ Offer Letter&quot;,
+&quot;D&quot;, &quot;Dorr&quot;,
+&quot;LTRY&quot;, &quot;DY Offer Letter&quot;,
+
+&quot;ECK&quot;, &quot;Eck&quot;,
+&quot;GREN&quot;, &quot;Green Field&quot;,
+&quot;GUG&quot;, &quot;Gug&quot;,
+
+&quot;IP&quot;, &quot;Innovation Park&quot;,
+&quot;IPG&quot;, &quot;Innovation Park Grass&quot;,
+&quot;I&quot;, &quot;IUSB Medical Lot&quot;,
+
+&quot;IS&quot;, &quot;Ivy&quot;,
+&quot;J&quot;, &quot;Joyce&quot;,
+&quot;JH&quot;, &quot;Joyce Handicap&quot;,
+
+&quot;JONO&quot;, &quot;Joyce North&quot;,
+&quot;JOSO&quot;, &quot;Joyce South&quot;,
+&quot;LIBR&quot;, &quot;Library&quot;,
+
+&quot;MULT&quot;, &quot;Multiple Passes&quot;,
+&quot;N&quot;, &quot;North Lots&quot;,
+&quot;OF&quot;, &quot;Official&quot;,
+
+&quot;RESA&quot;, &quot;Reserved A&quot;,
+&quot;RV&quot;, &quot;RV&quot;,
+&quot;RVS&quot;, &quot;RVS&quot;,
+
+&quot;SRV&quot;, &quot;RV Special&quot;,
+&quot;SCH&quot;, &quot;Sacred Heart&quot;,
+&quot;LTRF&quot;, &quot;Sorin Blue Offer Letter&quot;,
+
+&quot;LTRS&quot;, &quot;Sorin Trad. Offer Letter&quot;,
+&quot;STAD&quot;, &quot;Stadium&quot;,
+&quot;SH&quot;, &quot;Stadium Handicap&quot;,
+
+&quot;SR&quot;, &quot;Stadium Reserved&quot;,
+&quot;YR&quot;, &quot;Stayer&quot;,
+&quot;YRGA&quot;, &quot;Stayer - GA&quot;,
+
+&quot;W&quot;, &quot;White Field&quot;,
+&quot;WN&quot;, &quot;White North&quot;,
+&quot;WS&quot;, &quot;White South&quot;,
+
+
+&quot;Other&quot;
+)</formula>
+    <label>Parking Lot Label</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

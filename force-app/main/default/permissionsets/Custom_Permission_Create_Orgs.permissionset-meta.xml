@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Create_Orgs</name>
+    </customPermissions>
+    <description>Grants users ability to create orgs by circumventing Restrict_Org_Create validation rule.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Permission - Create Orgs</label>
+</PermissionSet>

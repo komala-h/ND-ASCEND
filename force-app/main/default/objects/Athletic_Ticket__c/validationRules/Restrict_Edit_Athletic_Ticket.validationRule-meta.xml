@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Edit_Athletic_Ticket</fullName>
+    <active>true</active>
+    <description>Prevent users who do not have the BEAT Admin Permission Set Group from editing existing Athletic Ticket records</description>
+    <errorConditionFormula>AND(
+
+NOT(ISNEW()),
+
+NOT(OR(
+
+$Profile.Name = &quot;System Administrator&quot;,
+$Permission.Edit_Athletic_Tickets_After_Create,
+$User.ND_Bypass_Duplicate_Rules__c = TRUE)
+
+)
+
+)</errorConditionFormula>
+    <errorMessage>You do not have the necessary permissions to edit this record. Please see the BEAT Admin team for any changes that need to be made.</errorMessage>
+</ValidationRule>

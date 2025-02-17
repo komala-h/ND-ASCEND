@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Only_Fields</fullName>
+    <active>true</active>
+    <description>Non BEAT admins are only able to edit the Request Status field in the Admin Only section</description>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    NOT( $Permission.BEAT_Admin),
+    ISCHANGED(Approval_Date__c),
+    ISCHANGED(Payment_Status__c),
+    ISCHANGED(Payment_Method__c),
+    ISCHANGED(Applied_Discount__c),
+    ISCHANGED(Transaction_Code__c),
+    ISCHANGED(Payment_Reference__c),
+    ISCHANGED(Payment_Date__c),
+    ISCHANGED(Admin_Comments__c),
+    ISCHANGED(Shipping_Cost__c),
+    ISCHANGED(Seat_Approved__c),
+ ISCHANGED(Event__c),
+    ISCHANGED(ND_Ticket_Type__c),
+    ISCHANGED(Seat_Lot_Requested__c),
+    ISCHANGED(Section__c),
+    ISCHANGED(Requestor_Comments__c),
+    ISCHANGED(Responsible_Payer__c),
+    ISCHANGED(Credit_Card_Status__c),
+    ISCHANGED(Requested_By__c),
+    ISCHANGED(Sit_With__c),
+    ISCHANGED(Swap__c),
+ ISCHANGED(Pre_Season_Pass__c),
+    ISCHANGED(Seat_Location__c)
+)</errorConditionFormula>
+    <errorMessage>Please contact Jill Calderone or Andrew Frye to make changes to the Ticket Request.</errorMessage>
+</ValidationRule>

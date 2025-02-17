@@ -1,0 +1,196 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+<aura:attribute name="accountRecord" type="Object"/>    
+<aura:attribute name="EditMode" type="boolean" default='false'/>    
+ <lightning:navigation aura:id="navigation"/>
+    
+<article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-account" title="account">
+            <lightning:icon iconName="standard:contact" alternativeText="Constituent Update" title="Constituent Update" />
+          <span class="slds-assistive-text">Constituent Update</span>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2 class="slds-card__header-title">
+          <a href="#" class="slds-card__header-link slds-truncate" title="Constituent Update">
+            <span>Constituent Update</span>
+          </a>
+        </h2>
+      </div>
+      <div class="slds-no-flex">
+        <aura:if isTrue="{!not(empty(v.accountRecord.ucinn_ascendv2__Contact__c))}">  
+        <button class="slds-button slds-button_neutral"  onclick="{!c.handleRedirect}">View</button>
+          </aura:if>    
+      </div>
+    </header>
+      
+  </div>
+    <div class="slds-card__body">
+        
+    <force:recordData aura:id="recordLoader"
+    recordId="{!v.recordId}"
+    fields="ucinn_ascendv2__Contact__c"
+    targetFields="{!v.accountRecord}"
+    />
+       <aura:if isTrue="{!not(empty(v.accountRecord.ucinn_ascendv2__Contact__c))}">  
+       <lightning:recordEditForm recordId="{!v.accountRecord.ucinn_ascendv2__Contact__c}" objectApiName="Contact" onerror="{!c.handleError}"  onsuccess="{!c.handleSuccess}">
+        <lightning:messages />
+<lightning:layout multipleRows="true">
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+
+                    <lightning:outputField fieldName="nd_Name_and_ID__c" />
+                         
+
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+
+                        <lightning:outputField fieldName="Spouse_ID_Formula__c" />
+
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <aura:if isTrue="{!v.EditMode == false}">
+                <div class="custom-box">
+                    <span class="slds-grid slds-grid_align-spread">
+                    <lightning:outputField fieldName="Nickname__c" />
+                    <button onclick="{!c.inlineEdit}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Description">
+                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                    </button>
+                    </span>    
+                </div>
+                    <aura:set attribute="else">
+                        
+					<lightning:inputField fieldName="Nickname__c" />
+                    </aura:set>                    
+                </aura:if>       
+            </lightning:layoutItem>
+    
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+
+                    <lightning:outputField fieldName="ucinn_ascendv2__Preferred_Address_Formula__c" />
+                         
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="ucinn_ascendv2__Preferred_Email_Type__c" />
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="Email" />
+                </div>
+            </lightning:layoutItem> 
+    <!--new changes -->
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="nd_Employer_Name__c" />
+                </div>
+            </lightning:layoutItem> 
+            <lightning:layoutItem size="6" padding="around-small">
+                <aura:if isTrue="{!v.EditMode == false}">
+                    <div class="custom-box">
+                        <span class="slds-grid slds-grid_align-spread">
+                            <lightning:outputField fieldName="Constituent_Status__c" />
+                            <button onclick="{!c.inlineEdit}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Description">
+                                <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                            </button>
+                        </span>    
+                    </div>
+                    <aura:set attribute="else">
+                        
+                        <lightning:inputField fieldName="Constituent_Status__c" />
+                    </aura:set>                    
+                </aura:if>                      
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6" padding="around-small">
+                
+                <aura:if isTrue="{!v.EditMode == false}">
+                    <div class="custom-box">
+                        <span class="slds-grid slds-grid_align-spread">
+                            <lightning:outputField fieldName="MobilePhone" />
+                            <button onclick="{!c.inlineEdit}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Description">
+                                <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                            </button>
+                        </span>    
+                    </div>
+                    <aura:set attribute="else">
+                        
+                        <lightning:inputField fieldName="MobilePhone" />
+                    </aura:set>                    
+                </aura:if>                      
+            </lightning:layoutItem> 
+            <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                <aura:if isTrue="{!v.EditMode == false}">
+                    <div class="custom-box">
+                        <span class="slds-grid slds-grid_align-spread">
+                            <lightning:outputField fieldName="Title" />
+                            <button onclick="{!c.inlineEdit}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Description">
+                                <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                            </button>
+                        </span>    
+                    </div>
+                    <aura:set attribute="else">
+                        
+                        <lightning:inputField fieldName="Title" />
+                    </aura:set>                    
+                </aura:if> 
+                </div>    
+            </lightning:layoutItem>  
+
+
+<!--new changes -->
+<lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="nd_spouses_inst_suffix__c" />
+                </div>
+            </lightning:layoutItem> 
+
+
+
+<lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="nd_Household_PRM__c" />
+                </div>
+            </lightning:layoutItem> 
+    
+    
+    <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                   
+                </div>
+            </lightning:layoutItem> 
+    
+    
+    <lightning:layoutItem size="6" padding="around-small">
+                <div class="custom-box">
+                    <lightning:outputField fieldName="nd_Household_GPO__c" />
+                </div>
+            </lightning:layoutItem> 
+
+    
+        </lightning:layout>         
+       <aura:if isTrue="{!v.EditMode}">
+        <center> 
+        <lightning:buttonGroup>   
+        <lightning:button class="slds-m-top_small" variant="brand" type="submit" name="update" label="Update" />
+        <lightning:button class="slds-m-top_small"  type="button" name="Cancel" label="Cancel" onclick="{!c.handleCancel}"/>
+        </lightning:buttonGroup>  
+        </center>      
+      </aura:if>    
+    </lightning:recordEditForm>
+           <aura:set attribute="else">               
+               We can't display this information because the record has no constituent lookup.
+           </aura:set>
+        </aura:if>
+    </div>
+</article>
+</aura:component>

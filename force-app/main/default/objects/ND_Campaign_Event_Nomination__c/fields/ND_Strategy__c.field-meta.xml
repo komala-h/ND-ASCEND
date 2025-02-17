@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Strategy__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Strategy</label>
+    <referenceTo>ucinn_ascendv2__Strategy__c</referenceTo>
+    <relationshipLabel>Campaign Event Nominations</relationshipLabel>
+    <relationshipName>Campaign_Event_Nominations</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

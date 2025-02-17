@@ -1,0 +1,39 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item size="12" flexibility="auto">
+            <div class="slds-size_1-of-3">
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-m-around_x-small">
+                        <c-multi-select-combobox data-id="mscSelectUser" options={userList} onselect={handleSelectUserChange} label="PRM"></c-multi-select-combobox>
+                    </div>
+                </div>
+                <div class="slds-grid slds-grid_vertical">
+                    <div class="slds-col slds-m-around_x-small">
+                        <c-multi-select-combobox data-id="mscSelectCampaign" options={userList} onselect={handleSelectCampaignChange} label="Weekend"></c-multi-select-combobox>
+                    </div>
+                </div>
+                <div class="slds-col slds-m-around_x-small">
+                    <br/>
+                </div>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <template if:true={displayLists}>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12" large-device-size="8" medium-device-size="12" small-device-size="12" flexibility="auto">
+                <div class="slds-grid slds-grid_vertical">
+                    <template for:each={relatedLists} for:item="rl" for:index="rlindex">
+                        <c-campaign-detail-related-list key={rl.key} mykey={rl.key} myparams={rl.params} userid={selectedUserId} campaignid={selectedCampaignId}></c-campaign-detail-related-list>
+                    </template>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" large-device-size="4" medium-device-size="12" small-device-size="12" flexibility="auto">
+                <div class="slds-grid slds-grid_vertical">
+                    <template for:each={relatedLists2} for:item="rl" for:index="rlindex">
+                        <c-campaign-detail-related-list key={rl.key} mykey={rl.key} myparams={rl.params} userid={selectedUserId} campaignid={selectedCampaignId}></c-campaign-detail-related-list>
+                    </template>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </template>
+</template>

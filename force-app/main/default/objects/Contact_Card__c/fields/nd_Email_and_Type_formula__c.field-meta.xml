@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_Email_and_Type_formula__c</fullName>
+    <description>If a Constituent is referenced, pulls the information from the Constituent record. If a Constituent is not referenced, display what was entered in the text field.</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(NOT(ISBLANK( Constituent__c  )), NOT(ISBLANK( Constituent__r.Email ))),
+
+(Constituent__r.Email &amp;BR() &amp;
+
+&quot;Email Type - &quot; &amp; CASE(Constituent__r.ucinn_ascendv2__Preferred_Email_Type__c,
+
+&apos;U&apos;,&apos;Business Email&apos;,
+&apos;O&apos;,&apos;Other Email&apos;,
+&apos;M&apos;,&apos;Personal Email&apos;,
+&apos;Fundraiser&apos;,&apos;Fundraiser&apos;,
+&apos;CC&apos;,&apos;Corporate Contact Email&apos;,
+&apos;Other&apos;)),
+
+IF(AND(NOT(ISBLANK( Constituent__c )),(ISBLANK( Constituent__r.Email ))),
+
+&quot;No Preferred Email&quot;,
+
+IF(ISBLANK(Constituent__c ),
+
+(Email__c &amp;BR() &amp; &quot;Email Type - &quot;&amp; TEXT(Email_Type__c)),
+
+&quot;&quot;
+)))</formula>
+    <label>Email and Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

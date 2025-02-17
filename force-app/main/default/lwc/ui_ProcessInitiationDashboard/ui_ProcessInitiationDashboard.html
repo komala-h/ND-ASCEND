@@ -1,0 +1,26 @@
+<template>
+    <lightning-card class="slds-p-around_small">
+        <div class="slds-var-p-bottom_small slds-var-p-left_small slds-var-p-right_small">
+            <h1><span class="slds-page-header__title slds-truncate" title="Export Dashboard">Process Initiation Dashboard</span></h1>
+
+            <lightning-tabset>
+                <lightning-tab label="NCOA" title="NCOA File Processing">
+                    <div style="border-radius:3px;border:solid #e9e9e9 1px;margin-bottom:5px">
+                        <lightning-card title="Process NCOA">
+                            <lightning-button onclick={handleButtonClick} name="processNCOA" label="Run" slot="actions" variant="brand"></lightning-button>
+                            <p class="slds-p-horizontal_small">Once the NCOA Interim records are loaded, initiate this job to verify the addresses. This job will also process those Interims.</p>
+                        </lightning-card>
+                    </div>
+                </lightning-tab>
+            </lightning-tabset>
+
+        </div>
+
+        <template if:true={isLoading}>
+            <div>
+              <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template> 
+
+    </lightning-card>
+</template>

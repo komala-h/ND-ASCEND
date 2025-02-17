@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Select_Event_before_To_Invite</fullName>
+    <active>true</active>
+    <description>The Campaign Administration Team must select the Campaign Event before the Campaign Event Nomination Status Field can be changed to &quot;Nomination Approved&quot;</description>
+    <errorConditionFormula>AND(
+
+ISBLANK(ND_Campaign_Event__c),
+
+ISPICKVAL(nd_Status__c,&quot;AP&quot;) 
+
+)</errorConditionFormula>
+    <errorDisplayField>ND_Campaign_Event__c</errorDisplayField>
+    <errorMessage>The Campaign Administration Team must select the Campaign Event before the Status field can be changed to &quot;Nomination Approved&quot;</errorMessage>
+</ValidationRule>

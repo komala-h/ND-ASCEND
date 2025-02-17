@@ -1,0 +1,31 @@
+<design:component label="Membership Logos">
+    <design:attribute name="title"
+                      label="Title"
+                      default="Giving Societies"/>
+
+    <design:attribute name="titleCssClass"
+                      label="Title CSS Class"
+                      default="slds-text-heading--small slds-text-title_caps slds-text-title_bold"
+                      description="CSS classes are defined here: https://www.lightningdesignsystem.com/utilities/text/" />
+
+    <design:attribute name="titleIcon"
+                      label="Title Icon"
+                      default="standard:social"
+                      description="The Lightning Design System name of the icon. Names are written in the format 'utility:down' where 'utility' is the category, and 'down' is the specific icon to be displayed.  Supported icons are defined here: https://www.lightningdesignsystem.com/icons/" />
+
+    <design:attribute name="titleIconShape"
+                      label="Title Icon Shape"
+                      datasource="square,circle"
+                      default="square"/>
+
+    <design:attribute name="titleIconSize"
+                      label="Title Icon Size"
+                      datasource="xx-small,x-small,small,medium,large"
+                      default="small"/>
+
+    <design:attribute name="titleIconVariant"
+                      label="Title Icon Variant"
+                      datasource=",inverse,success,warning,error"
+                      default=""
+                      description="Changes the appearance of a utility icon in the title icon."/>
+</design:component>

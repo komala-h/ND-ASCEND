@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lottery_Application_Change_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Constituent__c</columns>
+    <columns>Request_Reason__c</columns>
+    <columns>Requested_Level__c</columns>
+    <columns>Request_Notes__c</columns>
+    <columns>Request_Status__c</columns>
+    <columns>Status_Reason__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Requested_Level__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Lottery Application Change Requests</label>
+</ListView>

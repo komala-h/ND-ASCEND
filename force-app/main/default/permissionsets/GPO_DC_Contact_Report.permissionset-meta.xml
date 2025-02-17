@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>GPO_DC_Contact_Report</name>
+    </customPermissions>
+    <description>Permission Set that contains the Custom Permission for GPO DC&apos;s that have a GPO Profile.  When this Custom Permission is Assigned, then Cirrus Insight Contact Reports that are submitted by the DC will have the GPO as the Author.</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Display_for_PRM__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>GPO DC Contact Report</label>
+    <license>Salesforce</license>
+</PermissionSet>

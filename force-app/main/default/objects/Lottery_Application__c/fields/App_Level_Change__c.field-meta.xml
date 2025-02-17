@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>App_Level_Change__c</fullName>
+    <description>For use with Lottery Reporting TASK0198615. Describes the change in the donor&apos;s application level versus the app they had last year.
+Drop = Donor had an application last year, but not this year
+Higher = Donor has a higher application this year versus what they had last year
+Lower = Donor has a lower application level this year versus what they had last year
+Same = Donor has the same application this year that they had last year</description>
+    <inlineHelpText>Describes the change in the donor&apos;s application level versus the app they had last year.
+Drop = Donor had an application last year, but not this year
+Higher = Donor has a higher application this year versus what they had last year
+Lower = Donor has a lower application level this year versus what they had last year
+Same = Donor has the same application this year that they had last year</inlineHelpText>
+    <label>App Level Change</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>UP</fullName>
+                <default>false</default>
+                <label>Higher</label>
+            </value>
+            <value>
+                <fullName>DOWN</fullName>
+                <default>false</default>
+                <label>Lower</label>
+            </value>
+            <value>
+                <fullName>SAME</fullName>
+                <default>false</default>
+                <label>Same</label>
+            </value>
+            <value>
+                <fullName>DROP</fullName>
+                <default>false</default>
+                <label>Drop</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

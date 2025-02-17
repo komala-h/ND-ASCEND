@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Edit_Research_Request_Cases_After_Create</name>
+    </customPermissions>
+    <description>Grants users the Custom Permission to Edit Research Request Cases After Create</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Display_for_PRM__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ucinn_ascendv2__Review_Transaction_v2__c.nd_Multiple_Transmittals__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Permission - Edit Research Request Cases After Create</label>
+    <license>Salesforce</license>
+</PermissionSet>

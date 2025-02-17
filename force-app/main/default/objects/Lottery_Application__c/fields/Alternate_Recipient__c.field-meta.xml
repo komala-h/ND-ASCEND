@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternate_Recipient__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Populate if the Alternate Recipient is different from the recipient on the entity</inlineHelpText>
+    <label>Alternate Recipient</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Lottery Applications (Alternate Recipient)</relationshipLabel>
+    <relationshipName>Lottery_Applications1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

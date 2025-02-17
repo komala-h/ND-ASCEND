@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="CONTACT_StatusIndCtrl" >
+    <!-- Design Attributes -->
+    <aura:attribute name="parentObject" type="String" access="global"/>
+    <aura:attribute name="queryField" type="String" access="global"/>
+    <aura:attribute name="fieldValue" type="String" access="global"/>
+    <aura:attribute name="displayMessage" type="String" access="global"/>
+    <aura:attribute name="color" type="String" access="global"/>
+    <aura:attribute name="Textcolor" type="String" access="global" />
+    <aura:attribute name="badgeIcon" type="String" access="global"/>
+    <aura:attribute name="badgeIconExists" type="Boolean" access="global" Default="false"/>
+
+    <!-- Generic Attributes -->
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="showIndicator" type="Boolean" default="false" />
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="force:refreshview" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.showIndicator == true}">     
+        <div class="{!'slds-notify slds-notify_alert slds-m-bottom_small ' + v.color}" role="alert">
+            <aura:if isTrue="{!v.badgeIconExists}">
+                <lightning:icon iconName="{!v.badgeIcon}"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </aura:if>              
+            <h2 class="{!'slds-text-heading_medium '}" style="font-weight: bold"><div class="{!v.Textcolor}">{!v.displayMessage}</div></h2>
+        </div>
+    </aura:if>
+</aura:component>

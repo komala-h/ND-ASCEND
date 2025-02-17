@@ -1,0 +1,175 @@
+<template>
+    <lightning-card>
+   <div  class="slds-is-relative">
+    
+    <template if:true={isLoaded}>Content has been loading...   
+       <lightning-spinner
+           alternative-text="Loading..." variant="brand">
+       </lightning-spinner>
+    </template>
+
+    <template lwc:if={showpage1}>
+    <c-custom-user-lookup  onlookupupdate={handleSelUser}></c-custom-user-lookup>
+
+    <!--Input fields-->
+    <lightning-combobox name="Mass Assignment Type" label="Mass Assignment Type" value="" placeholder="Choose option" options={options} onchange={handleMassAssignmentTypeChange} class="validate" required></lightning-combobox>
+
+    <template lwc:if={MassAssTypeAdd}>
+        <lightning-combobox name="Organization Type" label="Organization Type" value="" placeholder="Organization Type" options={oraganizationOptions} onchange={handleOrganizationTypeChange} class="validate" required></lightning-combobox>
+    </template>
+    <template lwc:if={enableAssType}>
+        
+        <template if:true={AssignmentTypePicklist.data}>
+            <lightning-combobox name="Assignment Type" label="Assignment Type" value={assTypeValue} placeholder="choose..." options={AssignmentTypePicklist.data.values} onchange={handleAssignmentTypeChange} class="validate" required></lightning-combobox>
+        </template>
+    </template>
+    <lightning-card title="Upload your file contains only primary DonorId's as a column " icon-name="doctype:csv">
+        <div class="slds-p-around_medium">
+            <lightning-input type="file" label="Please upload a UTF-8 encoded, comma separated .csv file" accept=".csv"
+                onchange={handleCSVUpload}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+    <br/><br/>
+
+
+    <!-- <lightning-card title="Upload CSV File" icon-name="standard:file">
+        <div class="slds-m-around_medium">
+         
+            <lightning-file-upload
+                label="Upload CSV"
+                name="fileUploader"
+                accept={acceptedFormats}
+                record-id={recordId}
+                onuploadfinished={handleUploadFinished}>
+            </lightning-file-upload>
+
+            <template if:true={uploadedFiles.length}>
+                <p>File Uploaded:</p>
+                <ul>
+                    <template for:each={uploadedFiles} for:item="file">
+                        <li key={file.documentId}>
+                            {file.fileName} - {file.fileSize} bytes
+                        </li>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card> -->
+
+    <lightning-button-group>
+        <lightning-button variant="destructive" label="Cancel" title="Cancel" onclick={handleResetClick} class="slds-align_absolute-center slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Next" title=" Next action" onclick={handleClick} class=" slds-align_absolute-center slds-m-left_x-small"></lightning-button>
+    </lightning-button-group>
+</template>
+
+   <template if:true={showTable}>
+    <lightning-card>
+    <template if:true={MassAssTypeAdd}>  
+    
+        <template if:true={orgHousehold}>
+           
+            <template if:true={typePrimary}>            
+                Please select the Household records that you would like to assign <b>{currentUserName}</b> as the Primary Relationship Manager. Please note that only Households that are in the "Ready to Assign" Prospect Category are available for selection.
+            </template>
+
+            <template if:true={typeSecondary}> 
+                Please select the Household records that you would like to assign <b>{currentUserName}</b> as the Secondary Relationship Manager.
+            </template>
+
+        </template>
+
+        <template if:true={orgCorOrFoun}>
+            Please select the Corporation and Foundation records that you would like to assign to <b>{currentUserName}</b>. Please note that only Organizations that are in the "Need Assignment" Prospect Category are available for selection.
+        </template>
+     
+    </template>   
+
+    <template if:true={MassAssTypeDrop}> 
+        Please select the Organization records that you would like to drop from <b>{currentUserName}</b>'s portfolio. Please note that only Households where the Fundraiser is assigned as the Primary Relationship Manager are available for selection. Secondary Relationship Manager Assignment Drops should be handled manually.      
+    </template>
+
+    </lightning-card>
+
+    <template if:true={rows}> 
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="6" padding="around-small"></lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="search" label="Search" placeholder="Search..." onchange={handleSearch}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>       
+        <br/> <br/>
+        <lightning-datatable data-id="datatable" key-field="Id" data={rows} columns={columnHeader} selected-rows={selectedRows}
+        onrowselection={handleRowSelection}  onsort={doSorting}  sorted-by={sortBy} sorted-direction={sortDirection}>
+        </lightning-datatable>
+        <br/>
+        <lightning-card >  
+            <template if:true={disablePagination}>
+            <!--  Pagination Buttons Start -->
+            <div class="slds-align_absolute-center">
+            <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={handlePrevious}
+                disabled={isPreviousDisable}>
+            </lightning-button>
+            <span class="slds-badge slds-badge_lightest"
+                        style="margin-right: 10px;margin-left: 10px;">
+                        {totalRecountCount} records.
+                        Current Page {currentPage} of {totalPage}.
+            </span>
+            <br/><br/>
+            
+            <lightning-button  name="Next" label="Next" icon-name="utility:chevronright" icon-position="right" onclick={handleNext}
+                disabled={isNextDisable}>
+            </lightning-button>
+          
+        </div>
+        <br/>
+        </template> 
+            <p class="slds-p-horizontal_small slds-align_absolute-center" >
+                Total number of selected records: {selRecordsCount}.
+            </p>               
+        </lightning-card> 
+        <br/>
+        <!--  Pagination Buttons End --> 
+        <label class="slds-form-element__label" for="combobox-id-1"><abbr title="required" class="slds-required">*</abbr>{richTextLabel}</label>  
+        <lightning-input-rich-text  message-when-bad-input={errorMessage_0} valid={validity_0} disabled-categories="FORMAT_TEXT" label={richTextLabel} value={AssgComments} onchange={handleAssgComments} ></lightning-input-rich-text>
+        <template if:true={validity_0_1}>
+           <div style="color:red;">{errorMessage_0}</div>
+        </template>
+    </template>
+
+    <!-- Mass drop section 2-->
+    <template if:true={MassAssTypeDrop}> 
+        
+        <lightning-combobox name="Reassign to New Fundraiser?" label="Reassign to New Fundraiser?" value="" placeholder="choose..." options={assignmentOWnerOptions} onchange={handleAssignmentOwnerChange} class="validate2" required></lightning-combobox>
+        <template lwc:if={enableFundraiser}> 
+            <br/>
+            <c-custom-user-lookup  onlookupupdate={handleNewFundraiser}></c-custom-user-lookup>
+            <br/>
+            <label class="slds-form-element__label" for="combobox-id-1"><abbr title="required" class="slds-required">*</abbr>Assignment Comments (to be applied to all new Assignments)</label>
+            <lightning-input-rich-text message-when-bad-input={errorMessage_1} valid={validity_1} disabled-categories="FORMAT_TEXT"  required name="Assignment Comments (to be applied to all new Assignments)" label="Assignment Comments (to be applied to all new Assignments)" value={NewAssgComments} onchange={handleNewAssgComments} ></lightning-input-rich-text>
+            <template if:true={validity_1_1}>
+                <div style="color:red;">{errorMessage_1}</div>
+             </template>
+        </template> 
+        <template lwc:else>
+            <lightning-record-edit-form object-api-name="Account" record-type-id={orgHouseholdRecordType}>
+                <lightning-messages></lightning-messages>
+                <lightning-input-field value=""  class="validate2" required field-name="ND_Household_Category__c"  onchange={handleProspectChange}> </lightning-input-field>
+                <lightning-input-field value="" field-name="ND_Household_Types__c" class="validate2" required onchange={handleProspect2Change} >
+            </lightning-input-field>
+            </lightning-record-edit-form>
+            <template if:true={showDate}>
+                <lightning-input type="date" class="validate2" required onchange={handleDateChange} name="Re-Evaluation Date (at least 1 year out)" label="Re-Evaluation Date (at least 1 year out)" ></lightning-input>            
+            </template>
+        </template>
+    </template>
+<br/><br/>
+    <lightning-button variant="destructive" label="Cancel" title="Cancel" onclick={handleResetClick} class="slds-m-left_x-small"></lightning-button>
+    
+    <lightning-button  disabled={disableSubmit} variant="brand" label="Submit" title="Submit" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button>
+            
+</template>
+
+</div>
+</lightning-card>
+</template>

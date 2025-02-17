@@ -1,0 +1,23 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,lightning:actionOverride" access="global" controller="asc_UTIL_FundingPriorityTreeController">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:attribute name="parentTreeValues" type="String"/>
+    <aura:attribute name="mapCampaignFP" type="Map" />
+    <c:asc_UTIL_workPlanUnitTreeLWC ontreevalueevent="{!c.handleLWCEvent}"></c:asc_UTIL_workPlanUnitTreeLWC>
+    <!-- <lightning:button label="Call server?" onclick="{!c.echo}"/>
+    <lightning:button label="Create new record" onclick="{!c.createNewRecord}"/> -->
+
+    <!-- aura:if attribute = form1 render first form
+        save on next
+    trigger attribute = form2
+.
+.
+. 
+finally reach here:
+            var createRecordNewEvent = $A.get("e.force:createRecord");
+            createRecordNewEvent.setParams(params);
+            createRecordNewEvent.fire(); on the helper. The params are what's listed above. -->
+
+
+</aura:component>

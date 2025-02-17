@@ -1,0 +1,76 @@
+<template>
+    <section aria-modal="true" class="slds-modal slds-fade-in-open" style={modalDiplayCss}>
+        <div class="slds-modal__container ">
+            <header class="slds-modal__header">
+                <h2 class="slds-text-heading_medium">New Sub-Proposal</h2>
+                <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={handleCancel}></lightning-icon>
+            </header>
+            <div class="slds-modal__content">
+                <div class="slds-p-around_small">
+                    <lightning-record-edit-form object-api-name="Sub_Proposal__c" onsuccess={handleSuccess}>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input-field field-name="Opportunity__c" value={opportunityId} required="true" onchange={handleChange}></lightning-input-field>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input-field field-name="Description" required="true" onchange={handleChange}></lightning-input-field>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input name="tbxSubProposalFundingPriority" label="Funding Priority" value={fundingPriorityName} required="true" onclick={handleClick}></lightning-input>
+                                <lightning-input-field field-name="Funding_Priority__c" value={fundingPriorityId}  required="true" onchange={handleChange} style="display:none;"></lightning-input-field>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input-field field-name="Type__c" required="true" onchange={handleChange}></lightning-input-field>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input-field field-name="Planned_Gift_Type__c" required="true" onchange={handleChange}></lightning-input-field>
+                            </div>
+                        </div>
+                        <div class="slds-grid">
+                            <div class="slds-col slds-size_1-of-1">
+                                <lightning-input-field field-name="Amount__c" required="true" onchange={handleChange}></lightning-input-field>
+                            </div>
+                        </div>
+                        <input type="submit" class="btnsubmit-hidden"/>
+                    </lightning-record-edit-form>
+                </div>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button variant="neutral" label="Cancel" onclick={handleCancel} class="slds-p-around_x-small"></lightning-button>
+                <lightning-button variant="brand" label="Save" onclick={handleSubmit} class="slds-p-around_x-small"></lightning-button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+
+    <!-- Work Plan Unit Tree -->
+    <template if:true={displayWorkPlanUnitTreeModal}>
+        <section aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container ">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">Funding Priority</h2>
+                    <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={handleCloseWorkPlanUnitTreeModal}></lightning-icon>
+                </header>
+                <div class="slds-modal__content">
+                    <div class="slds-p-around_small">
+                        <c-work-plan-unit-tree onworkplanselected={handleWorkPlanUnitTreeSelected} onerror={handleWorkPlanUnitTreeError} campaign-id={campaignId} require-campaign-id="true"></c-work-plan-unit-tree>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCloseWorkPlanUnitTreeModal} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Select" onclick={handleSelectWorkPlanUnit} class="slds-p-around_x-small"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

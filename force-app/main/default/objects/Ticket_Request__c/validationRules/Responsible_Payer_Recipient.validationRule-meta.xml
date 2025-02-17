@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Responsible_Payer_Recipient</fullName>
+    <active>true</active>
+    <description>When Responsible Payer is Recipient, then Credit Card Status is required.</description>
+    <errorConditionFormula>TEXT( Responsible_Payer__c ) = &quot;Recipient&quot; &amp;&amp;
+ISBLANK(TEXT( Credit_Card_Status__c ))</errorConditionFormula>
+    <errorMessage>When Responsible Payer is Recipient, then Credit Card Status is required.</errorMessage>
+</ValidationRule>

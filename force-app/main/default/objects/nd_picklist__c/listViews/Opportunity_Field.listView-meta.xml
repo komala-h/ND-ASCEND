@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Field</fullName>
+    <columns>NAME</columns>
+    <columns>object_api_name__c</columns>
+    <columns>field_api_name__c</columns>
+    <columns>code__c</columns>
+    <columns>code_record_id__c</columns>
+    <columns>description__c</columns>
+    <columns>global_master_label__c</columns>
+    <columns>global_value_set_description__c</columns>
+    <columns>unique_id__c</columns>
+    <columns>OBJECT_ID</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>object_api_name__c</field>
+        <operation>equals</operation>
+        <value>Opportunity</value>
+    </filters>
+    <filters>
+        <field>field_api_name__c</field>
+        <operation>equals</operation>
+        <value>Type</value>
+    </filters>
+    <filters>
+        <field>code__c</field>
+        <operation>equals</operation>
+        <value>TO</value>
+    </filters>
+    <label>Opportunity Field</label>
+</ListView>

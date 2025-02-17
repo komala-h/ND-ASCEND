@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Type</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>transaction_primary_pg_transaction_type__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Transaction Type</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,11 @@
+<design:component >
+    <design:attribute name="relatedListSettingName" label="Related List Setting Name"/>
+    <design:attribute name="targetObjectName" label="Object Name"/>
+    <design:attribute name="targetAccountOrContactFieldName" label="Account or Contact Field Name"/>
+    <design:attribute name="junctionObjectName" label="Junction Object Name"/>
+    <design:attribute name="junctionAccountOrContactFieldName" label="Junction Account or Contact Field Name"/>
+    <design:attribute name="junctionLookupFieldName" label="Junction Lookup Field Name"/>
+    <design:attribute name="junctionInnerQuery" label="Junction Inner Query" description="The inner select query must have the 'Id' field"/>
+    <design:attribute name="junctionInnerQueryIdFieldName" label="Junction Inner Query Id Field Name" description="The Id field used for querying the outer query"/>
+    <design:attribute name="additionalFieldsToPopulate" label="Additional Fields To Populate"/>
+</design:component>

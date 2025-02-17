@@ -1,0 +1,234 @@
+<template>
+    <template if:true={displayModal}>
+        <section aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_medium" style={modalDisplayCss}>
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">New Proposal</h2>
+                    <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={handleCloseModal}></lightning-icon>
+                </header>
+                <div class="slds-modal__content">
+                    <div class="slds-p-around_large">
+                        <lightning-record-edit-form object-api-name="Opportunity" record-type-id={recordTypeId}>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="Title__c" required="true" onchange={handleChange}></lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="Type" required="true" onchange={handleChange}></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="AccountId" required="true" value={opportunityRec.AccountId} onchange={handleChange}></lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="StageName" required="true" onchange={handleChange}></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="nd_Likelihood_to_Close__c" required="true" value={opportunityRec.nd_Likelihood_to_Close__c} onchange={handleChange}></lightning-input-field>
+                                </div>
+                                <template if:true={displayResearchAwardNumber}>
+                                    <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                        <lightning-input-field field-name="nd_Research_Award_Number__c" onchange={handleChange}></lightning-input-field>
+                                    </div>
+                                </template>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="ucinn_ascendv2__Submitted_Date__c" required="true" onchange={handleChange}></lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="ucinn_ascendv2__Submitted_Amount__c" readonly="true" value={opportunityRec.ucinn_ascendv2__Submitted_Amount__c} onchange={handleChange}></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="ucinn_ascendv2__Expected_Close_Date__c" required="true" onchange={handleChange}></lightning-input-field>
+                                </div>
+                                <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                    <lightning-input-field field-name="CampaignId" required="true" value={opportunityRec.CampaignId} onchange={handleChange}></lightning-input-field>
+                                </div>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <template if:true={displayAnswerDate}>
+                                    <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                        <lightning-input-field field-name="nd_Answer_Date__c" onchange={handleChange}></lightning-input-field>
+                                    </div>
+                                </template>
+                                <template if:true={displayAnswerAmount}>
+                                    <div class="slds-col slds-size_1-of-2 ucin-gridcol">
+                                        <lightning-input-field field-name="nd_Answer_Amount__c" onchange={handleChange}></lightning-input-field>
+                                    </div>
+                                </template>
+                            </div>
+                            <div class="slds-grid ucin-grid">
+                                <div class="slds-col ucin-gridcol">
+                                    <lightning-input-field field-name="Description" onchange={handleChange}></lightning-input-field>
+                                </div>
+                            </div>
+                        </lightning-record-edit-form>
+                        <div class="ucin-section">
+                            <div class="ucin-sectiontitle">
+                                <div class="ucin-sectiontitletxt">Sub-Proposal</div>
+                                <div class="ucin-section-titlebtn"><lightning-button class="slds-m-top_small" label="Add Purpose" onclick={handleSubProposalAddRow}></lightning-button></div>
+                            </div>
+                            <div class="slds-grid ucin-grid ucin-list-head">
+                                <div class="slds-col slds-size_2-of-12 slds-p-around_xx-small ucin-gridcol ucin-nowrap">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Amount</label>
+                                    <template if:true={fieldHelpTextSubProposalAmountDisplay}>&nbsp;<lightning-helptext content={fieldHelpTextSubProposalAmount}></lightning-helptext></template>
+                                </div>
+                                <div class="slds-col slds-size_2-of-12 slds-p-around_xx-small ucin-gridcol ucin-nowrap">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Type</label>
+                                    <template if:true={fieldHelpTextSubProposalTypeDisplay}>&nbsp;<lightning-helptext content={fieldHelpTextSubProposalType}></lightning-helptext></template>
+                                </div>
+                                <div class="slds-col slds-size_2-of-12 slds-p-around_xx-small ucin-gridcol ucin-nowrap">
+                                    <label>Planned Gift Type</label>
+                                    <template if:true={fieldHelpTextSubProposalPlannedGiftTypeDisplay}>&nbsp;<lightning-helptext content={fieldHelpTextSubProposalPlannedGiftType}></lightning-helptext></template>
+                                </div>
+                                <div class="slds-col slds-size_2-of-12 slds-p-around_xx-small ucin-gridcol ucin-nowrap">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Funding Priority</label>
+                                    <template if:true={fieldHelpTextSubProposalFundingPriorityDisplay}>&nbsp;<lightning-helptext content={fieldHelpTextSubProposalFundingPriority}></lightning-helptext></template>
+                                </div>
+                                <div class="slds-col slds-size_3-of-12 slds-p-around_xx-small ucin-gridcol ucin-nowrap">
+                                    <label>Comments</label>
+                                    <template if:true={fieldHelpTextSubProposalCommentsDisplay}>&nbsp;<lightning-helptext content={fieldHelpTextSubProposalComments}></lightning-helptext></template>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-p-around_xx-small ucin-gridcol"></div>
+                            </div>
+                            <template for:each={subproposals} for:item="sp" for:index="spindex">
+                                <lightning-record-edit-form object-api-name="Sub_Proposal__c" key={sp.Key}>
+                                    <div class="slds-grid ucin-grid ucin-gridrow ucin-hidehelptext">
+                                        <div class="slds-col slds-size_2-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Amount</label>
+                                            <lightning-input-field field-name="Amount__c" key={sp.Key} data-id={sp.Key} value={sp.Amount__c} required="true" variant="label-hidden" onchange={handleSubProposalChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_2-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Type</label>
+                                            <lightning-input-field field-name="Type__c" key={sp.Key} data-id={sp.Key} value={sp.Type__c} required="true" variant="label-hidden" onchange={handleSubProposalChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_2-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Planned Gift Type</label>
+                                            <lightning-input-field field-name="Planned_Gift_Type__c" key={sp.Key} data-id={sp.Key} value={sp.Planned_Gift_Type__c} required="true" variant="label-hidden" onchange={handleSubProposalChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_2-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Funding Priority</label>
+                                            <lightning-input key={sp.Key} data-id={sp.Key} name="tbxSubProposalFundingPriority" label="Funding Priority" value={sp.FundingPriorityName} required="true" variant="label-hidden" onclick={handleSubProposalClick}></lightning-input>
+                                            <lightning-input-field field-name="Funding_Priority__c" key={sp.Key} data-id={sp.Key} label="Funding Priority ID" value={sp.Funding_Priority__c} style="display:none;" onchange={handleSubProposalChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_3-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Comments</label>
+                                            <lightning-input-field field-name="Comments__c" key={sp.Key} data-id={sp.Key} value={sp.Comments__c} variant="label-hidden" onchange={handleSubProposalChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <lightning-button key={sp.Key} data-id={sp.Key} class="slds-m-top_small" label="Del" onclick={handleSubProposalRemoveRow}></lightning-button>
+                                        </div>
+                                    </div>
+                                </lightning-record-edit-form>
+                            </template>
+                        </div>
+                        <div class="ucin-section">
+                            <div class="ucin-sectiontitle">
+                                <div class="ucin-sectiontitletxt">
+                                    Opportunity Team
+                                    <div class="ucin-sectionsubtitletxt">Indicates those people you will partner with to make the ask.</div>
+                                </div>
+                                <div class="ucin-section-titlebtn"><lightning-button class="slds-m-top_small" label="Add Team Member" onclick={handleOpportunityTeamMemberAddRow}></lightning-button></div>
+                            </div>
+                            <div class="slds-grid ucin-grid ucin-list-head">
+                                <div class="slds-col slds-size_6-of-12 slds-p-around_xx-small ucin-gridcol">
+                                    <label><abbr title="required" class="slds-required">*</abbr>User</label>
+                                </div>
+                                <div class="slds-col slds-size_5-of-12 slds-p-around_xx-small ucin-gridcol">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Role</label>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-p-around_xx-small ucin-gridcol"></div>
+                            </div>
+                            <template for:each={oppteammembers} for:item="otm" for:index="otmindex">
+                                <lightning-record-edit-form object-api-name="OpportunityTeamMember" key={otm.Key}>
+                                    <div class="slds-grid ucin-grid ucin-gridrow">
+                                        <div class="slds-col slds-size_6-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>User</label>
+                                            <lightning-input-field field-name="UserId" key={otm.Key} data-id={otm.Key} value={otm.UserId} required="true" variant="label-hidden" onchange={handleOpportunityTeamMemberChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_5-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Role</label>
+                                            <lightning-input-field field-name="TeamMemberRole" key={otm.Key} data-id={otm.Key} value={otm.TeamMemberRole} required="true" variant="label-hidden" onchange={handleOpportunityTeamMemberChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <lightning-button key={otm.Key} data-id={otm.Key} class="slds-m-top_small" label="Del" onclick={handleOpportunityTeamMemberRemoveRow}></lightning-button>
+                                        </div>
+                                    </div>
+                                </lightning-record-edit-form>
+                            </template>
+                        </div>
+                        <div class="ucin-section">
+                            <div class="ucin-sectiontitle">
+                                <div class="ucin-sectiontitletxt">
+                                    Contacts
+                                    <div class="ucin-sectionsubtitletxt">Used by CFR - Other Notre Dame partners outside of University Relations.</div>
+                                </div>
+                                <div class="ucin-section-titlebtn"><lightning-button class="slds-m-top_small" label="Add Contact" onclick={handleOpportunityContactRoleAddRow}></lightning-button></div>
+                            </div>
+                            <div class="slds-grid ucin-grid ucin-list-head">
+                                <div class="slds-col slds-size_6-of-12 slds-p-around_xx-small ucin-gridcol">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Contact</label>
+                                </div>
+                                <div class="slds-col slds-size_5-of-12 slds-p-around_xx-small ucin-gridcol">
+                                    <label><abbr title="required" class="slds-required">*</abbr>Role</label>
+                                </div>
+                                <div class="slds-col slds-size_1-of-12 slds-p-around_xx-small ucin-gridcol"></div>
+                            </div>
+                            <template for:each={oppcontactroles} for:item="ocr" for:index="ocrindex">
+                                <lightning-record-edit-form object-api-name="OpportunityContactRole" key={ocr.Key}>
+                                    <div class="slds-grid ucin-grid ucin-gridrow">
+                                        <div class="slds-col slds-size_6-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Contact</label>
+                                            <lightning-input-field field-name="ContactId" key={ocr.Key} data-id={ocr.Key} value={ocr.ContactId} required="true" variant="label-hidden" onchange={handleOpportunityContactRoleChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_5-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <label class="ucin-listfield-label"><abbr title="required" class="slds-required">*</abbr>Role</label>
+                                            <lightning-input-field field-name="Role" key={ocr.Key} data-id={ocr.Key} value={ocr.Role} required="true" variant="label-hidden" onchange={handleOpportunityContactRoleChange}></lightning-input-field>
+                                        </div>
+                                        <div class="slds-col slds-size_1-of-12 slds-p-around_xxx-small ucin-gridcol">
+                                            <lightning-button key={ocr.Key} data-id={ocr.Key} class="slds-m-top_small" label="Del" onclick={handleOpportunityContactRoleRemoveRow}></lightning-button>
+                                        </div>
+                                    </div>
+                                </lightning-record-edit-form>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCloseModal} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={btnSubmitText} onclick={handleSubmit} disabled={btnSubmitDisabled}></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <!-- Work Plan Unit Tree -->
+    <template if:true={displayWorkPlanUnitTreeModal}>
+        <section aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container ">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">Funding Priority</h2>
+                    <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={handleCloseWorkPlanUnitTreeModal}></lightning-icon>
+                </header>
+                <div class="slds-modal__content">
+                    <div class="slds-p-around_large">
+                        <c-work-plan-unit-tree onworkplanselected={handleWorkPlanUnitTreeSelected} onerror={handleWorkPlanUnitTreeError} campaign-id={opportunityRec.CampaignId} require-campaign-id="true"></c-work-plan-unit-tree>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCloseWorkPlanUnitTreeModal} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Select" onclick={handleSelectWorkPlanUnit} class="slds-p-around_x-small"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

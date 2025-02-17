@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Code__c</fullName>
+    <label>Transaction Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <label>AI-Additional Inventory</label>
+            </value>
+            <value>
+                <fullName>AOP</fullName>
+                <default>false</default>
+                <label>AOP-Access Only Pass</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>D-Donor</label>
+            </value>
+            <value>
+                <fullName>FR</fullName>
+                <default>false</default>
+                <label>FR-Fundraiser</label>
+            </value>
+            <value>
+                <fullName>NC</fullName>
+                <default>false</default>
+                <label>NC-No Charge</label>
+            </value>
+            <value>
+                <fullName>PLC</fullName>
+                <default>false</default>
+                <label>PLC-President&apos;s Leadership Council</label>
+            </value>
+            <value>
+                <fullName>US</fullName>
+                <default>false</default>
+                <label>US-University Staff</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposed_Lottery_Application_Level__c</fullName>
+    <description>For use with Lottery Reporting TASK0198615. This is the application level calculated by the system. It is possible this does not match their currently assigned app in field &quot;Lottery Application Level&quot; because it has not been reviewed yet. During some times of the year, calculated applications are not automatically applied to a donor&apos;s final application level due to requiring a review first.</description>
+    <inlineHelpText>This is the application level calculated by the system. It is possible this does not match their currently assigned app in field &quot;Lottery Application Level&quot; because it has not been reviewed yet. During some times of the year, calculated applications are not automatically applied to a donor&apos;s final application level due to requiring a review first.</inlineHelpText>
+    <label>Proposed Lottery Application Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Lottery_Application_Level</valueSetName>
+    </valueSet>
+</CustomField>

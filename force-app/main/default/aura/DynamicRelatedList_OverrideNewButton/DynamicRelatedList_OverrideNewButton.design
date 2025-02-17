@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="relatedListSettingName" label="Custom Metadata relatedList Name"/>
+	<design:attribute name="overrideNewButton" label="Lightning component (Example - c:[LightningComponentName])"/>
+</design:component>

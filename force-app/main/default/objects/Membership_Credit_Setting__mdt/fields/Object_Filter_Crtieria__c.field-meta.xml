@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Filter_Crtieria__c</fullName>
+    <description>Filter criteria for the Related Object&apos;s records.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Enter the WHERE clause string to filter the Related Object&apos;s records.</inlineHelpText>
+    <label>Object Filter Crtieria</label>
+    <length>131072</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

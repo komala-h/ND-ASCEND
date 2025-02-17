@@ -1,0 +1,20 @@
+<aura:component controller="asc_BIO_ExtendedRelatedListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="accountOrContactRecordId" type="String"/>
+    <aura:attribute name="relatedListSettingName" type="String" required="true"/>
+    <aura:attribute name="targetObjectName" type="String" required="true"/>
+    <aura:attribute name="targetAccountOrContactFieldName" type="String" required="true"/>
+    <aura:attribute name="additionalFieldsToPopulate" type="String"/>
+    <aura:attribute name="additionalFieldsToPopulateMap" type="Map" default="{}"/>
+    <aura:attribute name="overrideNewButton" type="String" default=""/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <aura:if isTrue="{!and(v.accountOrContactRecordId != null, v.relatedListSettingName != null)}" >
+        <ucinn_ascendv2:RelatedList recordId="{!v.accountOrContactRecordId}" 
+                                    outsideAscendPackage="true" 
+                                    relatedListSettingName="{!v.relatedListSettingName}"
+                                    additionalFieldsToPopulate="{!v.additionalFieldsToPopulateMap}"
+                                    overrideNewButton="{!v.overrideNewButton}"/>
+    </aura:if>
+</aura:component>

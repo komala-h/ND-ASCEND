@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Profile_Picture</name>
+    </customPermissions>
+    <description>Grants General User-Read All users access to edit Constituent profile pictures (Monogram Club TASK0176367)</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Display_for_PRM__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ucinn_ascendv2__Review_Transaction_v2__c.nd_Multiple_Transmittals__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Permission - Profile Picture</label>
+</PermissionSet>

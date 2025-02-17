@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Category_Family_Foundation_Fields</fullName>
+    <active>true</active>
+    <description>Validation to ensure that the 990 Year, Number of Officers, Total Assets, and Total Grants Paid fields are only filled out if the Category is Foundation Assets</description>
+    <errorConditionFormula>NOT(ISPICKVAL(Category__c , &quot;Foundation Assets&quot;))
+&amp;&amp;
+OR(
+NOT(ISBLANK( X990_Year__c )),
+NOT(ISBLANK( Total_Assets__c)),
+NOT(ISBLANK( Number_of_Officers__c)),
+NOT(ISBLANK( Total_Grants_Paid__c))
+)</errorConditionFormula>
+    <errorDisplayField>X990_Year__c</errorDisplayField>
+    <errorMessage>The 990 Year, Number of Officers, Total Assets, and Total Grants Paid fields should only be filled out if the Category is Foundation Assets.</errorMessage>
+</ValidationRule>

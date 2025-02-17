@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Non_Development_Interest__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to capture if constituent may be a member due to non development interest (and should be excluded from giving reports)</description>
+    <label>Non-Development Interest</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item__c</fullName>
+    <label>Item</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Boat</fullName>
+                <default>false</default>
+                <label>Boat</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Plane</fullName>
+                <default>false</default>
+                <label>Plane</label>
+            </value>
+            <value>
+                <fullName>Art/Rare Collectibles</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Art/Rare Collectibles</label>
+            </value>
+            <value>
+                <fullName>Commercial Property</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Property</label>
+            </value>
+            <value>
+                <fullName>Helicopter</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Helicopter</label>
+            </value>
+            <value>
+                <fullName>Luxury Car</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Luxury Car</label>
+            </value>
+            <value>
+                <fullName>Private Island</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Private Island</label>
+            </value>
+            <value>
+                <fullName>Private Jet</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Private Jet</label>
+            </value>
+            <value>
+                <fullName>Residential Property</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Residential Property</label>
+            </value>
+            <value>
+                <fullName>Yacht</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yacht</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Luxury Items</controllingFieldValue>
+            <valueName>Boat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Luxury Items</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Luxury Items</controllingFieldValue>
+            <valueName>Plane</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

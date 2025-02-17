@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FOAPAL_Ticket_Requests</fullName>
+    <columns>Donor_Name__c</columns>
+    <columns>Actual_Charge_Amount__c</columns>
+    <columns>FOAPAL__c</columns>
+    <columns>Revenue_FOAPAL__c</columns>
+    <columns>Status__c</columns>
+    <columns>Payment_Status__c</columns>
+    <columns>Requestor_Comments__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Responsible_Payer__c</field>
+        <operation>equals</operation>
+        <value>FOAPAL</value>
+    </filters>
+    <label>FOAPAL Ticket Requests</label>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>long_data_ind__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>designates that the record&apos;s data does not fit into one JSON</description>
+    <label>long data ind</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

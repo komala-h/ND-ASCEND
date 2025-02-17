@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>jv_type__c</fullName>
+    <label>jv type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DV1</fullName>
+                <default>false</default>
+                <label>DV1</label>
+            </value>
+            <value>
+                <fullName>DV2</fullName>
+                <default>false</default>
+                <label>DV2</label>
+            </value>
+            <value>
+                <fullName>DV3</fullName>
+                <default>false</default>
+                <label>DV3</label>
+            </value>
+            <value>
+                <fullName>DV4</fullName>
+                <default>false</default>
+                <label>DV4</label>
+            </value>
+            <value>
+                <fullName>DV5</fullName>
+                <default>false</default>
+                <label>DV5</label>
+            </value>
+            <value>
+                <fullName>DV6</fullName>
+                <default>false</default>
+                <label>DV6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

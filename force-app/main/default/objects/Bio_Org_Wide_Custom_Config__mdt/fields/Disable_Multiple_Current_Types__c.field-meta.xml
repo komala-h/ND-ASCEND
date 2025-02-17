@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disable_Multiple_Current_Types__c</fullName>
+    <description>Custom field used by the ND Address/Phone/Email preferred and current logic</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>separate by semicolon, make sure no space between each type</inlineHelpText>
+    <label>Disable Multiple Current Types</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

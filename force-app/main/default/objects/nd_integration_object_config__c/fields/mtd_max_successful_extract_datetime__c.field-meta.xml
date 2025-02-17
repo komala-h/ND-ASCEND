@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>mtd_max_successful_extract_datetime__c</fullName>
+    <description>This is the date time on the most recent row moved to integration out</description>
+    <inlineHelpText>This is the date time on the most recent row moved to integration out</inlineHelpText>
+    <label>mtd max successful extract datetime</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

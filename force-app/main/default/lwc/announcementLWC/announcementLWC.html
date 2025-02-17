@@ -1,0 +1,73 @@
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+             <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+             </lightning-spinner>
+        </template>
+    </div>
+    <article class="slds-card slds-card_boundary">
+        <div class="slds-card__header slds-grid ">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate slds-grid_align-spread">
+                <div class="slds-col slds-grid slds-grid_vertical-align-center">
+                    <div class="slds-media_small slds-media__figure">
+                        <lightning-icon size="small" icon-name="action:announcement"></lightning-icon>
+                    </div>
+                    <h2 title="Title">
+                        <b>
+                            <span class="slds-text-heading_small">Announcements</span>
+                        </b>
+                    </h2>
+                </div>
+                <div class="slds-col">
+                    <lightning-button-icon icon-name="utility:refresh" title="Refresh" onclick={refreshComponent}></lightning-button-icon>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-card_boundary slds-grid_vertical">
+                <template if:true={wiredRecords}>
+                   <!-- <template if:true={cmtRecord}>
+                        <div class="slds-var-m-around_small slds-var-p-horizontal_small slds-var-p-top_small slds-var-p-bottom_large slds-border_bottom ">       
+                            <p>Click on link to reference Announcement Guidelines: <lightning-formatted-url value={cmtRecord.Link__c} label="Announcement Files and Guidelines" target="_blank" ></lightning-formatted-url></p>
+                        </div>
+                    </template>-->
+                    <template for:each={wiredRecords} for:item="alert">
+                        <div key={alert.Id} class="slds-var-m-around_small slds-var-p-horizontal_small slds-var-p-top_small slds-var-p-bottom_large slds-grid slds-border_bottom ">
+                            <div class="slds-media__figure">
+                                <lightning-icon size="x-small" icon-name="action:announcement"></lightning-icon>
+                            </div>
+                            <div>
+                               
+                                    <p class="h1">Announcement: <lightning-formatted-url tooltip="To view a record" value={alert.recURL} target="_blank" label={alert.nd_Subject__c} > </lightning-formatted-url></p>
+                                  </br>
+                                <!-- <p class="h1">Message: &nbsp;</p> 
+                                <div class="containerWrap"> {alert.nd_Message__c}</div> -->
+                                
+                                <lightning-formatted-rich-text value={alert.nd_Message__c} class="containerWrap"></lightning-formatted-rich-text>
+                                <a href={alert.recURL} target="_blank"> Continue Reading -></a>
+                            </div>
+                        </div>
+                    </template>
+                        <lightning-layout>
+                        <lightning-layout-item>
+                            <lightning-button label="Previous" 
+                            icon-name="utility:chevronleft"
+                            onclick={previousHandler}
+                            disabled={disablePrevious}></lightning-button>
+                        </lightning-layout-item>
+                        <lightning-layout-item flexibility="grow">
+                            <p class="slds-text-align_center">Displaying {currentPage} of {totalPage} Page</p>
+                        </lightning-layout-item>
+                        <lightning-layout-item>
+                            <lightning-button label="Next" 
+                            icon-name="utility:chevronright"
+                            icon-position="right"
+                            onclick={nextHandler}
+                            disabled={disableNext}></lightning-button>
+                        </lightning-layout-item>
+                        </lightning-layout>
+                </template>
+            </div>
+        </div>
+    </article>
+</template>

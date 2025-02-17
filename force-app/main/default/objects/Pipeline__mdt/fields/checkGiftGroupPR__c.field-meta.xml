@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>checkGiftGroupPR__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Group for gifts that did not hit hierarchy, but GDM needs to have a manual review before posting instead of an auto post</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>checkGiftGroupPR</label>
+    <type>Checkbox</type>
+</CustomField>

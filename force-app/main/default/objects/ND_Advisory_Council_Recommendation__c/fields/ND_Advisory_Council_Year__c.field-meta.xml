@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Advisory_Council_Year__c</fullName>
+    <description>Year of Advisory Council membership</description>
+    <label>Advisory Council Year</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>ucinn_ascendv2__Fiscal_Year</valueSetName>
+    </valueSet>
+</CustomField>

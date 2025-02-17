@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card_Status__c</fullName>
+    <label>Credit Card Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Card on File</fullName>
+                <default>false</default>
+                <label>No Card on File</label>
+            </value>
+            <value>
+                <fullName>Recipient Contacted</fullName>
+                <default>false</default>
+                <label>Recipient Contacted</label>
+            </value>
+            <value>
+                <fullName>Card Authorized</fullName>
+                <default>false</default>
+                <label>Card Authorized</label>
+            </value>
+            <value>
+                <fullName>Card On File</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Card On File</label>
+            </value>
+            <value>
+                <fullName>Needed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Needed</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pending</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Event</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>BEAT Event</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Seat Assignments</relationshipLabel>
+    <relationshipName>Seat_Assignments</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<design:component >
+    <design:attribute name="parentObject" label="Contact or Account Field API Name on Service Indicator"/>
+    <design:attribute name="queryField" label="Field to determine visibility" />
+    <design:attribute name="fieldValue" label="Value of the field to determine visibility"/>
+    <design:attribute name="color" label="Color" datasource="White,DeepPink,DeepSkyBlue,LimeGreen,Green,Gold,Red,RosyBrown,Tomato,Turquoise,Violet,YellowGreen,Grey,Black,Blue"/>
+    <design:attribute name="badgeIcon" label="Optional Badge Icon. Get icon name from lightning icon list."/>
+    <design:attribute name="displayMessage" label="Message to show when visible"/>
+    <design:attribute name="Textcolor" label="Textcolor" datasource="TextGreen,TextWhite"/>
+</design:component>

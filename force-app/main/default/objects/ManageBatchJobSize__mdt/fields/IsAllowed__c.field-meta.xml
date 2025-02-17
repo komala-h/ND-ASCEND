@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsAllowed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Using this field in AdvisoryCouncilSuffixBatch class to execute the specific  query on conditional basis</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>IsAllowed</label>
+    <type>Checkbox</type>
+</CustomField>

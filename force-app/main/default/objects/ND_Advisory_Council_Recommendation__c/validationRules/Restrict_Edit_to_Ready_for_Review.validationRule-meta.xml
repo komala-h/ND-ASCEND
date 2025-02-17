@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Edit_to_Ready_for_Review</fullName>
+    <active>true</active>
+    <description>Prevent users who are not in the Advisory Council profile from editing Advisory Council Recommendation records once is past the &quot;1-Ready for Review&quot; Stage.</description>
+    <errorConditionFormula>AND(
+
+NOT(OR(
+ISPICKVAL(ND_Stage__c, &apos;1&apos;),
+ISPICKVAL(ND_Stage__c, &apos;&apos;))
+),
+
+NOT(OR(
+$Profile.Name = &quot;System Administrator&quot;,
+$Profile.Name = &quot;Advisory Council&quot;,
+$User.ND_Bypass_Duplicate_Rules__c = TRUE)
+)
+
+)</errorConditionFormula>
+    <errorMessage>This Advisory Council Recommendation has already moved out of the &quot;1-Ready for Review&quot; Stage. Please see a member of the Advisory Council team for any changes that need to be made.</errorMessage>
+</ValidationRule>

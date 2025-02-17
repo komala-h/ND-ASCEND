@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-col slds-m-around_x-small">
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span>{mylabel}</span>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning-button-icon icon-name="utility:refresh" alternative-text="Refresh" class="slds-p-around_xx-small" onclick={handleRefresh}></lightning-button-icon>
+                        <template if:true={displayNewButton}>
+                            <lightning-button variant="neutral" label={newButtonLabel} onclick={handleCreateNewRecord}></lightning-button>
+                        </template>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body">
+                <lightning-datatable
+                    key-field={mykey}
+                    data={recordsToDisplay}
+                    columns={mycolumns}
+                    hide-checkbox-column="true"
+                    sortable="false">
+                </lightning-datatable>
+            </div>
+            <div class="slds-grid" style="justify-content: space-between;">
+                <div class="slds-m-around_x-small slds-align_absolute-center"><span>Showing {pageNumber} of {totalPages} Page(s)</span></div>
+                <div class="slds-m-around_x-small">
+                    <lightning-button disabled={disableFirst} icon-name="utility:jump_to_left" class="slds-p-horizontal_x-small" alternative-text="first page" onclick={handleGoToFirstPage}></lightning-button>
+                    <lightning-button disabled={disableFirst} icon-name="utility:chevronleft" alternative-text="Previous" onclick={handleGoToPreviousPage}></lightning-button>
+                    <lightning-button disabled={disableLast} icon-name="utility:chevronright" alternative-text="Next" onclick={handleGoToNextPage} class="slds-p-horizontal_x-small" icon-position="right"></lightning-button>
+                    <lightning-button disabled={disableLast} icon-name="utility:jump_to_right" alternative-text="last page" onclick={handleGoToLastPage} icon-position="right"></lightning-button>
+                </div>
+            </div>
+        </article>
+    </div>
+    <c-new-record-form data-id={mykey} object-name={newButtonObjectName} record-type-id={newButtonRecordTypeId} form-label={newButtonFormLabel} onnewrecordsubmitsuccess={handleCreateNewRecordSuccess}></c-new-record-form>
+</template>

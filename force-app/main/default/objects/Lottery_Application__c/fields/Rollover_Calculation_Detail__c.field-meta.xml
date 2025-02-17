@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rollover_Calculation_Detail__c</fullName>
+    <description>For use with Lottery Reporting TASK0198615. Detailed report on how the field &quot;Rollover Amount&quot; was calculated</description>
+    <inlineHelpText>Detailed report on how the field &quot;Rollover Amount&quot; was calculated</inlineHelpText>
+    <label>Rollover Calculation Detail</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

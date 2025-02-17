@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Campaign_Event__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <inlineHelpText>Campaign Event that the Benefactor will be invited to.</inlineHelpText>
+    <label>Campaign Event</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please select a Campaign Event record.</errorMessage>
+        <filterItems>
+            <field>Campaign.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign Event</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Campaign Event Nominations</relationshipLabel>
+    <relationshipName>Campaign_Event_Nominations</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

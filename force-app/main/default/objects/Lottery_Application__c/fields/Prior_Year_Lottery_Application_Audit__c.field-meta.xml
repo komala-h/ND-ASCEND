@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prior_Year_Lottery_Application_Audit__c</fullName>
+    <description>For use with Lottery Reporting TASK0198615. This is the calculation details for that application level, but calculated with this year&apos;s data. This field tells us why the donor didn&apos;t get the same applications this year as last year.</description>
+    <inlineHelpText>This is the calculation details for that application level, but calculated with this year&apos;s data. This field tells us why the donor didn&apos;t get the same applications this year as last year.</inlineHelpText>
+    <label>Prior Year Lottery Application Audit</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

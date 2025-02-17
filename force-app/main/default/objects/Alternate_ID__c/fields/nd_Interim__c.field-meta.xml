@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_Interim__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Interim</label>
+    <referenceTo>ucinn_ascendv2__Interim__c</referenceTo>
+    <relationshipLabel>Alternate IDs</relationshipLabel>
+    <relationshipName>Alternate_IDs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

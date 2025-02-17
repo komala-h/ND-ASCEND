@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Load_Source__c</fullName>
+    <label>Load Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AUTO</fullName>
+                <default>false</default>
+                <label>Year End Load</label>
+            </value>
+            <value>
+                <fullName>GRANDFATHER</fullName>
+                <default>false</default>
+                <label>Grandfather Load</label>
+            </value>
+            <value>
+                <fullName>HISTORICAL</fullName>
+                <default>false</default>
+                <label>Historical Load</label>
+            </value>
+            <value>
+                <fullName>MANUAL</fullName>
+                <default>false</default>
+                <label>Manual Override</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

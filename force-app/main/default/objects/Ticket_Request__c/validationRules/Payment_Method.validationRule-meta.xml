@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method</fullName>
+    <active>true</active>
+    <description>If Status = Assigned, Approved or Transferred, then Payment Method is required</description>
+    <errorConditionFormula>OR(
+TEXT( Status__c ) = &quot;Assigned&quot; &amp;&amp; ISBLANK(TEXT(Payment_Method__c)),
+TEXT( Status__c ) = &quot;Approved&quot; &amp;&amp; ISBLANK(TEXT(Payment_Method__c)),
+TEXT( Status__c ) = &quot;Transferred&quot; &amp;&amp; ISBLANK(TEXT(Payment_Method__c))
+)</errorConditionFormula>
+    <errorMessage>If Status =  Assigned, Approved or Transferred, then Payment Method is required</errorMessage>
+</ValidationRule>

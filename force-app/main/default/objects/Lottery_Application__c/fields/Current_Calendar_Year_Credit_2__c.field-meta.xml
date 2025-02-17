@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Calendar_Year_Credit_2__c</fullName>
+    <description>For use with Lottery Reporting TASK0198615. University Credit amount given by this donor for the year normally used to calculate a donor&apos;s football apps ( Football Season year minus 2). The year of giving for this amount is in field &quot;Year of Current Calendar Year Credit -2&quot;</description>
+    <inlineHelpText>University Credit amount given by this donor for the year normally used to calculate a donor&apos;s football apps ( Football Season year minus 2). The year of giving for this amount is in field &quot;Year of Current Calendar Year Credit -2&quot;</inlineHelpText>
+    <label>Current Calendar Year Credit -2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

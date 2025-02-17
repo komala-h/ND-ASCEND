@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apply_Proposed_Lottery_Application__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>For use with Lottery Reporting TASK0198615. This checkbox applies the &quot;Proposed Lottery Application Level&quot; to the donors actual &quot;Lottery Application Level&quot;. When saving this record with this field checked, automation will trigger that change as well as a few other tasks such as saving off the previous app to field &quot;Replaced Lottery Application Level&quot;.</description>
+    <inlineHelpText>This checkbox applies the &quot;Proposed Lottery Application Level&quot; to the donors actual &quot;Lottery Application Level&quot;. When saving this record with this field checked, automation will trigger that change as well as a few other tasks such as saving off the previous app to field &quot;Replaced Lottery Application Level&quot;.</inlineHelpText>
+    <label>Apply Proposed Lottery Application</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

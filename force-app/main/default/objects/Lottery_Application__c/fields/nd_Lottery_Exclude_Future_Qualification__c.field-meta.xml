@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_Lottery_Exclude_Future_Qualification__c</fullName>
+    <formula>IF(
+    NOT(ISBLANK(Constituent__c)),
+    Constituent__r.nd_Lottery_Exclude_Future_Qualification__c,
+    IF(
+        NOT(ISBLANK(Account__c)),
+        Account__r.nd_Lottery_Exclude_Future_Qualification__c,
+        FALSE 
+    )
+)</formula>
+    <label>Lottery Exclude Future Qualification</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

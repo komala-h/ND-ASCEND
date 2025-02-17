@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Is_Rockne__c</columns>
+    <columns>Unrestricted_Type__c</columns>
+    <columns>Order__c</columns>
+    <columns>Related_Object__c</columns>
+    <columns>Object_Filter_Crtieria__c</columns>
+    <columns>Contact_Field__c</columns>
+    <columns>Match_Membership_Division_Code__c</columns>
+    <columns>Hard_Creditor_DCO__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

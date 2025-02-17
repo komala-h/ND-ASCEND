@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JVs_in_new_status</fullName>
+    <columns>NAME</columns>
+    <columns>jv_type__c</columns>
+    <columns>opportunity_name__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>clearing_account__c</columns>
+    <columns>clearing_amount__c</columns>
+    <columns>designation_amount__c</columns>
+    <columns>designation_account__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>jv_status__c</field>
+        <operation>equals</operation>
+        <value>new</value>
+    </filters>
+    <label>JVs in new status</label>
+</ListView>

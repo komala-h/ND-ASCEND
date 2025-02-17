@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>ND_574</name>
+    </customPermissions>
+    <description>For use in validation rule which allows Cat Edmonds to only create ND574 society memberships</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ucinn_ascendv2__Review_Transaction_v2__c.nd_Multiple_Transmittals__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Permission-ND 574</label>
+</PermissionSet>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Officers__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please include the 990 Year, Number of Officers, Total Assets and Total Grants Paid when the Category is Family Foundation Assets.</inlineHelpText>
+    <label>Number of Officers</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

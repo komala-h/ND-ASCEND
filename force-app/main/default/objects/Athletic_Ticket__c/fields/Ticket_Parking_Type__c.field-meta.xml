@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticket_Parking_Type__c</fullName>
+    <label>Ticket/Parking Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BO</fullName>
+                <default>false</default>
+                <label>Bowl Game</label>
+            </value>
+            <value>
+                <fullName>CO</fullName>
+                <default>false</default>
+                <label>Complimentary</label>
+            </value>
+            <value>
+                <fullName>FCM</fullName>
+                <default>false</default>
+                <label>Foley&apos;s Club Membership</label>
+            </value>
+            <value>
+                <fullName>LOT</fullName>
+                <default>false</default>
+                <label>Lottery</label>
+            </value>
+            <value>
+                <fullName>PL</fullName>
+                <default>false</default>
+                <label>Parking Lottery</label>
+            </value>
+            <value>
+                <fullName>EX</fullName>
+                <default>false</default>
+                <label>Parking Lottery Exclude</label>
+            </value>
+            <value>
+                <fullName>SF</fullName>
+                <default>false</default>
+                <label>Season 1842</label>
+            </value>
+            <value>
+                <fullName>SB</fullName>
+                <default>false</default>
+                <label>Season Bench</label>
+            </value>
+            <value>
+                <fullName>SC</fullName>
+                <default>false</default>
+                <label>Season Club</label>
+            </value>
+            <value>
+                <fullName>SL</fullName>
+                <default>false</default>
+                <label>Season Loge</label>
+            </value>
+            <value>
+                <fullName>SPA</fullName>
+                <default>false</default>
+                <label>Season Pass</label>
+            </value>
+            <value>
+                <fullName>SPF</fullName>
+                <default>false</default>
+                <label>Season Preferred</label>
+            </value>
+            <value>
+                <fullName>SS</fullName>
+                <default>false</default>
+                <label>Season Shamrock Game</label>
+            </value>
+            <value>
+                <fullName>ST</fullName>
+                <default>false</default>
+                <label>Season Ticket</label>
+            </value>
+            <value>
+                <fullName>SG</fullName>
+                <default>false</default>
+                <label>Single Game</label>
+            </value>
+            <value>
+                <fullName>Single Game Exception</fullName>
+                <default>false</default>
+                <label>Single Game Exception</label>
+            </value>
+            <value>
+                <fullName>GM</fullName>
+                <default>false</default>
+                <label>Single Game Purchase</label>
+            </value>
+            <value>
+                <fullName>SO</fullName>
+                <default>false</default>
+                <label>South Club</label>
+            </value>
+            <value>
+                <fullName>LA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Air Force</label>
+            </value>
+            <value>
+                <fullName>LB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Arizona State</label>
+            </value>
+            <value>
+                <fullName>LZ</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Army</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery BYU</label>
+            </value>
+            <value>
+                <fullName>L8</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Ball State</label>
+            </value>
+            <value>
+                <fullName>LS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Boston College</label>
+            </value>
+            <value>
+                <fullName>M2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Bowling Green</label>
+            </value>
+            <value>
+                <fullName>M8</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery California</label>
+            </value>
+            <value>
+                <fullName>MB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Central Michigan</label>
+            </value>
+            <value>
+                <fullName>M5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Cincinnati</label>
+            </value>
+            <value>
+                <fullName>LT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Clemson</label>
+            </value>
+            <value>
+                <fullName>L1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Duke</label>
+            </value>
+            <value>
+                <fullName>LM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Florida State</label>
+            </value>
+            <value>
+                <fullName>L6</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Georgia</label>
+            </value>
+            <value>
+                <fullName>LU</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Georgia Tech</label>
+            </value>
+            <value>
+                <fullName>LN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Louisville</label>
+            </value>
+            <value>
+                <fullName>M7</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Marshall</label>
+            </value>
+            <value>
+                <fullName>L2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Miami</label>
+            </value>
+            <value>
+                <fullName>L7</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Miami (Ohio)</label>
+            </value>
+            <value>
+                <fullName>LD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Michigan</label>
+            </value>
+            <value>
+                <fullName>LE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Michigan State</label>
+            </value>
+            <value>
+                <fullName>L4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery NC State</label>
+            </value>
+            <value>
+                <fullName>LF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Navy</label>
+            </value>
+            <value>
+                <fullName>L3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Nevada</label>
+            </value>
+            <value>
+                <fullName>M1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery New Mexico</label>
+            </value>
+            <value>
+                <fullName>LO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery North Carolina</label>
+            </value>
+            <value>
+                <fullName>LP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Northwestern</label>
+            </value>
+            <value>
+                <fullName>M6</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Ohio State</label>
+            </value>
+            <value>
+                <fullName>LG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Oklahoma</label>
+            </value>
+            <value>
+                <fullName>LH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Pittsburgh</label>
+            </value>
+            <value>
+                <fullName>LI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Purdue</label>
+            </value>
+            <value>
+                <fullName>LQ</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Rice</label>
+            </value>
+            <value>
+                <fullName>LJ</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Stanford</label>
+            </value>
+            <value>
+                <fullName>LR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Syracuse</label>
+            </value>
+            <value>
+                <fullName>LK</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Temple</label>
+            </value>
+            <value>
+                <fullName>MA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Tennessee State</label>
+            </value>
+            <value>
+                <fullName>LV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Texas</label>
+            </value>
+            <value>
+                <fullName>M3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Toledo</label>
+            </value>
+            <value>
+                <fullName>LW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery UMass</label>
+            </value>
+            <value>
+                <fullName>M9</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery UNLV</label>
+            </value>
+            <value>
+                <fullName>LL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery USC</label>
+            </value>
+            <value>
+                <fullName>L9</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Vanderbilt</label>
+            </value>
+            <value>
+                <fullName>LX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Virginia</label>
+            </value>
+            <value>
+                <fullName>L5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Virginia Tech</label>
+            </value>
+            <value>
+                <fullName>LY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Wake Forest</label>
+            </value>
+            <value>
+                <fullName>M4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lottery Wisconsin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

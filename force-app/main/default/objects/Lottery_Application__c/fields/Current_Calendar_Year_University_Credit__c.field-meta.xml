@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Calendar_Year_University_Credit__c</fullName>
+    <description>Lifetime University Credit Amount</description>
+    <inlineHelpText>University Credit amount given by this donor for the year this football application will be used for. This will not count directly for the application on this row, but might help make decisions when reviewing apps. The year of giving for this amount is in field &quot;Year of Current Calendar Year Credit&quot;</inlineHelpText>
+    <label>Current Calendar Year University Credit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

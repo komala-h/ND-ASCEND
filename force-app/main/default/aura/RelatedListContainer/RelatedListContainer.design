@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="relatedListSettingName" label="Related List Setting Name"/>
+    <design:attribute name="overrideNewButtonComponent" label="New Button Override Component Name"/>
+</design:component>

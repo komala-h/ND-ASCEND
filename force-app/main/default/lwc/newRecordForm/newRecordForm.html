@@ -1,0 +1,52 @@
+<template>
+    <template if:true={displayForm}>
+        <section aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container ">
+                <header class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">{formLabel}</h2>
+                    <lightning-icon class="slds-modal__close" icon-name="utility:close" size="small" onclick={handleCloseForm}></lightning-icon>
+                </header>
+                <div class="slds-modal__content">
+                    <div class="slds-p-around_medium">
+                        <lightning-record-edit-form
+                            onsubmit={handleFormSubmit}
+                            onsuccess={handleFormSuccess}
+                            onerror={handleFormError}
+                            object-api-name={objectName}
+                            record-type-id={recordTypeId}>
+
+                            <lightning-messages></lightning-messages>
+
+                            <template for:each={layoutSections} for:item="ls" for:index="lsindex">
+                                <div key={ls.key} class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title" style="background-color: #f0f0f0">
+                                        &emsp;{ls.label}
+                                    </h3>
+                                    <div class="slds-section__content">
+                                        <lightning-layout multiple-rows="true">
+                                            <template for:each={ls.lstFields} for:item="field" for:index="fieldindex">
+                                                <lightning-layout-item key={field.key} size="12" large-device-size="6" medium-device-size="12" small-device-size="12" flexibility="auto, no shrink" padding="horizontal-small">
+                                                    <template if:false={field.isReadOnly}>
+                                                        <lightning-input-field field-name={field.fieldName} required={field.isRequired}></lightning-input-field>
+                                                    </template>
+                                                    <template if:true={field.isReadOnly}>
+                                                        <lightning-output-field field-name={field.fieldName}></lightning-output-field>
+                                                    </template>
+                                                </lightning-layout-item>
+                                            </template>
+                                        </lightning-layout>
+                                    </div>
+                                </div>
+                            </template>
+                        </lightning-record-edit-form>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Cancel" onclick={handleCloseForm} class="slds-p-around_x-small"></lightning-button>
+                    <lightning-button variant="brand" label={btnFormSubmitText} onclick={handleFormSubmit} disabled={btnFormSubmitDisabled} class="slds-p-around_x-small"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>jv_status__c</fullName>
+    <label>jv status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>new</fullName>
+                <default>false</default>
+                <label>new</label>
+            </value>
+            <value>
+                <fullName>processed</fullName>
+                <default>false</default>
+                <label>processed</label>
+            </value>
+            <value>
+                <fullName>written to file</fullName>
+                <default>false</default>
+                <label>written to file</label>
+            </value>
+            <value>
+                <fullName>error</fullName>
+                <default>false</default>
+                <label>error</label>
+            </value>
+            <value>
+                <fullName>processed in advance</fullName>
+                <default>false</default>
+                <label>processed in advance</label>
+            </value>
+            <value>
+                <fullName>processed manually not sent in file</fullName>
+                <default>false</default>
+                <label>processed manually not sent in file</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

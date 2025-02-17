@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Campaign_Where_Members_Were_Created__c</fullName>
+    <description>Stores the ID of the Campaign record where the Constituents from the Household were created as Campaign Members.  This field will be used in the Flow to prevent trying to create duplicate Campaign Member records which will result in an error.</description>
+    <externalId>false</externalId>
+    <label>Campaign Where Members Were Created</label>
+    <length>18</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

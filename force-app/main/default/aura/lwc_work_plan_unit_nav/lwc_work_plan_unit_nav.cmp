@@ -1,0 +1,13 @@
+<aura:component controller="workPlanUnitController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+<aura:attribute name="response" type="List"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.getWorkUnitTiers}"></aura:handler>
+  
+<lightning:breadcrumbs class="slds-m-around_small">
+    <aura:iteration items="{!v.response}" var="tiers">
+        <lightning:breadcrumb label="{!tiers.Name}" href="{!'/lightning/r/'+tiers.Id+'/view'}"/>
+      </aura:iteration>
+
+    </lightning:breadcrumbs>
+	
+</aura:component>

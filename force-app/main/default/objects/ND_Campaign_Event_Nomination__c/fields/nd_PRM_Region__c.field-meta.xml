@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_PRM_Region__c</fullName>
+    <description>Campaign Event Nomination Household PRM Region</description>
+    <externalId>false</externalId>
+    <formula>Case(TEXT( ND_Household__r.ucinn_ascendv2__PRM__r.ND_Group_Region__c ),
+&apos;1&apos;,&apos;East&apos;,
+&apos;2&apos;,&apos;Midwest&apos;,
+&apos;3&apos;,&apos;West&apos;,
+&apos;4&apos;,&apos;South&apos;,
+&apos;P&apos;,&apos;Principal Gift&apos;,
+&apos;G&apos;,&apos;Gift Planning&apos;,
+&apos;R&apos;,&apos;Programs&apos;,
+&apos;C&apos;,&apos;Corporate Relations&apos;,
+&apos;U&apos;,&apos;University Relations Exec&apos;,
+&apos;A&apos;,&apos;Annual Giving&apos;,
+&apos;T&apos;,&apos;Athletics&apos;,
+&apos;I&apos;,&apos;Global Advancement&apos;,
+&apos;D&apos;,&apos;Academic Advancement&apos;,
+&apos;X&apos;,&apos;None&apos;,
+&apos;F&apos;,&apos;Foundation Relations&apos;,
+&apos;E&apos;,&apos;Corporate/Foundation Relations&apos;,
+&apos;J&apos;,&apos;Central&apos;,
+&apos;K&apos;,&apos;East Coast&apos;,
+&apos;L&apos;,&apos;Illinois&apos;,
+&apos;N&apos;,&apos;Northwest&apos;,
+&apos;M&apos;,&apos;NY Metro&apos;,
+&apos;S&apos;,&apos;Southern&apos;,
+&apos;H&apos;,&apos;Southwest&apos;,
+&apos;O&apos;,&apos;Other&apos;,
+null
+)</formula>
+    <inlineHelpText>Campaign Event Nomination Household PRM Region</inlineHelpText>
+    <label>PRM Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>checkGiftGroupYA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Should this pipeline type go through processing for YA gift group</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>checkGiftGroupYA</label>
+    <type>Checkbox</type>
+</CustomField>

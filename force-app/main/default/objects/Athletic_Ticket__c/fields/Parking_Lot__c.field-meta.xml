@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parking_Lot__c</fullName>
+    <label>Parking Lot</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AERO</fullName>
+                <default>false</default>
+                <label>Aero</label>
+            </value>
+            <value>
+                <fullName>AL</fullName>
+                <default>false</default>
+                <label>Alumni</label>
+            </value>
+            <value>
+                <fullName>AVE</fullName>
+                <default>false</default>
+                <label>Ave</label>
+            </value>
+            <value>
+                <fullName>BAND</fullName>
+                <default>false</default>
+                <label>Band</label>
+            </value>
+            <value>
+                <fullName>BK</fullName>
+                <default>false</default>
+                <label>Bookstore</label>
+            </value>
+            <value>
+                <fullName>U</fullName>
+                <default>false</default>
+                <label>Bulla</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <label>Burke</label>
+            </value>
+            <value>
+                <fullName>BD</fullName>
+                <default>false</default>
+                <label>Burke/Dorr</label>
+            </value>
+            <value>
+                <fullName>BN</fullName>
+                <default>false</default>
+                <label>Burke North</label>
+            </value>
+            <value>
+                <fullName>BS</fullName>
+                <default>false</default>
+                <label>Burke South</label>
+            </value>
+            <value>
+                <fullName>CN</fullName>
+                <default>false</default>
+                <label>Cartier North</label>
+            </value>
+            <value>
+                <fullName>CS</fullName>
+                <default>false</default>
+                <label>Cartier South</label>
+            </value>
+            <value>
+                <fullName>LTR</fullName>
+                <default>false</default>
+                <label>DB+ Offer Letter</label>
+            </value>
+            <value>
+                <fullName>D</fullName>
+                <default>false</default>
+                <label>Dorr</label>
+            </value>
+            <value>
+                <fullName>LTRY</fullName>
+                <default>false</default>
+                <label>DY Offer Letter</label>
+            </value>
+            <value>
+                <fullName>ECK</fullName>
+                <default>false</default>
+                <label>Eck</label>
+            </value>
+            <value>
+                <fullName>GREN</fullName>
+                <default>false</default>
+                <label>Green Field</label>
+            </value>
+            <value>
+                <fullName>GUG</fullName>
+                <default>false</default>
+                <label>Gug</label>
+            </value>
+            <value>
+                <fullName>IP</fullName>
+                <default>false</default>
+                <label>Innovation Park</label>
+            </value>
+            <value>
+                <fullName>IPG</fullName>
+                <default>false</default>
+                <label>Innovation Park Grass</label>
+            </value>
+            <value>
+                <fullName>I</fullName>
+                <default>false</default>
+                <label>IUSB Medical Lot</label>
+            </value>
+            <value>
+                <fullName>IS</fullName>
+                <default>false</default>
+                <label>Ivy</label>
+            </value>
+            <value>
+                <fullName>J</fullName>
+                <default>false</default>
+                <label>Joyce</label>
+            </value>
+            <value>
+                <fullName>JH</fullName>
+                <default>false</default>
+                <label>Joyce Handicap</label>
+            </value>
+            <value>
+                <fullName>JONO</fullName>
+                <default>false</default>
+                <label>Joyce North</label>
+            </value>
+            <value>
+                <fullName>JOSO</fullName>
+                <default>false</default>
+                <label>Joyce South</label>
+            </value>
+            <value>
+                <fullName>LIBR</fullName>
+                <default>false</default>
+                <label>Library</label>
+            </value>
+            <value>
+                <fullName>MULT</fullName>
+                <default>false</default>
+                <label>Multiple Passes</label>
+            </value>
+            <value>
+                <fullName>N</fullName>
+                <default>false</default>
+                <label>North Lots</label>
+            </value>
+            <value>
+                <fullName>OF</fullName>
+                <default>false</default>
+                <label>Official</label>
+            </value>
+            <value>
+                <fullName>RESA</fullName>
+                <default>false</default>
+                <label>Reserved A</label>
+            </value>
+            <value>
+                <fullName>RV</fullName>
+                <default>false</default>
+                <label>RV</label>
+            </value>
+            <value>
+                <fullName>RVS</fullName>
+                <default>false</default>
+                <label>RVS</label>
+            </value>
+            <value>
+                <fullName>SRV</fullName>
+                <default>false</default>
+                <label>RV Special</label>
+            </value>
+            <value>
+                <fullName>SCH</fullName>
+                <default>false</default>
+                <label>Sacred Heart</label>
+            </value>
+            <value>
+                <fullName>LTRF</fullName>
+                <default>false</default>
+                <label>Sorin Blue Offer Letter</label>
+            </value>
+            <value>
+                <fullName>LTRS</fullName>
+                <default>false</default>
+                <label>Sorin Trad. Offer Letter</label>
+            </value>
+            <value>
+                <fullName>STAD</fullName>
+                <default>false</default>
+                <label>Stadium</label>
+            </value>
+            <value>
+                <fullName>SH</fullName>
+                <default>false</default>
+                <label>Stadium Handicap</label>
+            </value>
+            <value>
+                <fullName>SR</fullName>
+                <default>false</default>
+                <label>Stadium Reserved</label>
+            </value>
+            <value>
+                <fullName>YR</fullName>
+                <default>false</default>
+                <label>Stayer</label>
+            </value>
+            <value>
+                <fullName>YRGA</fullName>
+                <default>false</default>
+                <label>Stayer - GA</label>
+            </value>
+            <value>
+                <fullName>W</fullName>
+                <default>false</default>
+                <label>White Field</label>
+            </value>
+            <value>
+                <fullName>WN</fullName>
+                <default>false</default>
+                <label>White North</label>
+            </value>
+            <value>
+                <fullName>WS</fullName>
+                <default>false</default>
+                <label>White South</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

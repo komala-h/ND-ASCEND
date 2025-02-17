@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows mapping SRD&apos;s and other personnel to their respective regions.  This can be useful in workflow and automation.</description>
+    <label>Group/Region Assignment</label>
+    <pluralLabel>Group/Region SRD Assignments</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

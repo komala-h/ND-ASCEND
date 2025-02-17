@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Online__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that a gift came from an online source and an electronic gift receipt has already been provided.</description>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Indicates that a gift came from an online source and an electronic gift receipt has already been provided.</inlineHelpText>
+    <label>Online</label>
+    <type>Checkbox</type>
+</CustomField>

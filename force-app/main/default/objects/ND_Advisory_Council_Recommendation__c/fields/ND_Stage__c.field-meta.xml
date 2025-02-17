@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Stage__c</fullName>
+    <description>Stage of advisory council renewal/nomination</description>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>true</default>
+                <label>1-Ready for Review</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2-In Progress</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3-Complete</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>4-Canceled</label>
+            </value>
+            <value>
+                <fullName>Academic Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Academic Review</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Constituent Responded</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Constituent Responded</label>
+            </value>
+            <value>
+                <fullName>Constituent Response Needed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Constituent Response Needed</label>
+            </value>
+            <value>
+                <fullName>Development Leadership Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Development Leadership Review</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Invitation Extended</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Invitation Extended</label>
+            </value>
+            <value>
+                <fullName>Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Review</label>
+            </value>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Submitted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

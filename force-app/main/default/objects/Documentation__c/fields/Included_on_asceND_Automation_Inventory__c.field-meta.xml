@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Included_on_asceND_Automation_Inventory__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Note if the automation described in this configuration is on the asceND Automation Inventory.</inlineHelpText>
+    <label>Included on asceND Automation Inventory</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

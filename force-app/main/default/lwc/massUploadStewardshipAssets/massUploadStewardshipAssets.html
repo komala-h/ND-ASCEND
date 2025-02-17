@@ -1,0 +1,28 @@
+<!-- Component to enable users to mass upload Stewardship assets-->
+<template>
+    <template if:true={showLoadingSpinner}>
+        <div style="z-index: 10000 !important;">
+            <lightning-spinner alternative-text="Uploading......" size="medium" style="z-index: 10000 !important;"></lightning-spinner>
+        </div>
+    </template>
+ 
+    <lightning-card>
+        <div style="margin-left:4%; margin:0px auto; width: 300px; ">
+            <div  >
+                <lightning-combobox label="Choose the recordtype" options={picklistValues} placeholder="Select an option" value={selectedValue} onchange={handlePicklistChange} disabled={isComboboxDisabled}></lightning-combobox>  
+                <br/><br/>
+                <lightning-input label="Choose the .csv file to be uploaded" name="file uploader" accept=".csv" onchange={handleFilesChange} type="file" disabled={isFileUploaderDisabled} ></lightning-input>
+            </div><br/>
+            <div class="slds-text-body_small slds-text-color_error">{fileName}
+ 
+            </div><br/>
+            <div>
+                <lightning-button class="slds-m-top--medium" label={UploadFile} onclick={handleSave} variant="brand" disabled={disableUploadCSVButton}></lightning-button>
+            </div><br/><br/>
+            
+        </div><br/><br/>
+        <div style="Margin:20px">
+            <lightning-button label="Return to List View" onclick={close}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

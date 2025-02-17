@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_hivebrite_create_from_id__c</fullName>
+    <description>This field is used only when creating a Salesforce record that was sourced from the Hivebrite system. It will be used to link the Salesforce record to the Hivebrite record when data flows back from CRM to Hivebrite. It will not be used to keep things in sync ongoing. The data in this field is only required until the record is linked to this Salesforce record in Hivebrite.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used only when creating a Salesforce record that was sourced from the Hivebrite system. It will be used to link the Salesforce record to the Hivebrite record when data flows back from CRM to Hivebrite.</inlineHelpText>
+    <label>Hivebrite Create From ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

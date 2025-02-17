@@ -1,0 +1,7 @@
+<design:component >
+    <design:attribute name="relatedListSettingName" label="Related List Setting Name"/>
+    <design:attribute name="targetObjectName" label="Object Name"/>
+    <design:attribute name="targetAccountOrContactFieldName" label="Account or Contact Field Name"/>
+    <design:attribute name="additionalFieldsToPopulate" label="Additional Fields To Populate"/>
+    <design:attribute name="overrideNewButton" label="Override New Button"/>
+</design:component>

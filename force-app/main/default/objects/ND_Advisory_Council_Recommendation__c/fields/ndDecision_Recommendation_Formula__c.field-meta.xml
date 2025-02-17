@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ndDecision_Recommendation_Formula__c</fullName>
+    <description>Formula field which shows the Membership Decision or Renewal Recommendation picklist label for use in the Advisory Council Recommendation Post To Chatter Flow TASK0175893</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    NOT(ISPICKVAL( ND_Membership_Decision__c , &quot;&quot;)), 
+    CASE(ND_Membership_Decision__c,
+        &quot;A&quot;, &quot;Approved&quot;,
+        &quot;R&quot;, &quot;Rejected&quot;,
+        &quot;G&quot;, &quot;Gift Contingent&quot;,
+        &quot;D&quot;, &quot;Deferred to future FY&quot;,
+&quot;&quot;
+    ),
+    CASE(ND_Renewal_Recommendation__c,
+        &quot;UG&quot;, &quot;Council 1 Year Renewal&quot;,
+        &quot;UB&quot;, &quot;Council 3 Year Renewal&quot;,
+       &quot;UC&quot;, &quot;Council Retire&quot;,
+       &quot;UT&quot;, &quot;Council Transfer&quot;,
+       &quot;UF&quot;, &quot;Defer to Council Leadership/Non Dev Interest&quot;,
+       &quot;UR&quot;, &quot;Member Self Retire&quot;,
+&quot;&quot;
+    )
+)</formula>
+    <label>Decision Recommendation Formula</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

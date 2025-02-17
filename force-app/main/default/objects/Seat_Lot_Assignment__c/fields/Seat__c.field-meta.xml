@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seat__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Seat</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Seat_Lot__c.Event_Lookup__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Event__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Seat_Lot__c</referenceTo>
+    <relationshipLabel>Seat Assignments</relationshipLabel>
+    <relationshipName>Seat_Assignments1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

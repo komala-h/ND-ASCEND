@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="relatedListSettingName" label="relatedListSettingName"/>
+    <design:attribute name="targetLookupField" label="targetLookupField" datasource="AccountId,ContactId"/>
+</design:component>

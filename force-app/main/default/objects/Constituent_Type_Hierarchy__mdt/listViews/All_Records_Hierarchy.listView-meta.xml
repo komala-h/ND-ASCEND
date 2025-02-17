@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Records_Hierarchy</fullName>
+    <columns>MasterLabel</columns>
+    <columns>type_code__c</columns>
+    <columns>hierarchy__c</columns>
+    <columns>Institutional_Suffix_Hierarchy_Order__c</columns>
+    <columns>DeveloperName</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records - Hierarchy</label>
+    <language>en_US</language>
+</ListView>

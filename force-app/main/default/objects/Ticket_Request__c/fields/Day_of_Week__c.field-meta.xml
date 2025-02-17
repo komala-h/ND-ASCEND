@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Day_of_Week__c</fullName>
+    <description>Day of the week. For example Sunday, Monday, Tuesday... Saturday.</description>
+    <externalId>false</externalId>
+    <formula>Event__r.nd_Weekday__c</formula>
+    <inlineHelpText>Day of the week. For example Sunday, Monday, Tuesday... Saturday.</inlineHelpText>
+    <label>Day of the Week</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

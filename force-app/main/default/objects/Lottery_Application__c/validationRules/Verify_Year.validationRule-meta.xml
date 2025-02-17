@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verify_Year</fullName>
+    <active>true</active>
+    <description>Year must be between 1960 and 2060</description>
+    <errorConditionFormula>Year__c &lt; &quot;1960&quot; ||
+Year__c &gt; &quot;2060&quot;</errorConditionFormula>
+    <errorMessage>Year must be between 1960 and 2060</errorMessage>
+</ValidationRule>

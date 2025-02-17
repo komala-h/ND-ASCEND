@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ND_Existing_Membership__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup to existing advisory council membership</description>
+    <label>Existing Membership</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>ucinn_ascendv2__Involvement__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Advisory Council</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.ND_Constituent__c</field>
+            <operation>equals</operation>
+            <valueField>ucinn_ascendv2__Involvement__c.ucinn_ascendv2__Contact__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>ucinn_ascendv2__Involvement__c</referenceTo>
+    <relationshipLabel>Advisory Council Recommendations</relationshipLabel>
+    <relationshipName>Advisory_Council_Nominations</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

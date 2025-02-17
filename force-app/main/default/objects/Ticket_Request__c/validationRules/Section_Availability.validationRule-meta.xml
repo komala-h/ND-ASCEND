@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section_Availability</fullName>
+    <active>false</active>
+    <description>Number of tickets requested exceeds the Section&apos;s availability</description>
+    <errorConditionFormula>Seat_Lot_Requested__c &gt;  Section_Seat_Lots_Available__c</errorConditionFormula>
+    <errorMessage>Number of tickets requested exceeds the Section&apos;s availability</errorMessage>
+</ValidationRule>

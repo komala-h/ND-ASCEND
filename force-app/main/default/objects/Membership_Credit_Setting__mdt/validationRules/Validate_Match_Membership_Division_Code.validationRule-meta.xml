@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Match_Membership_Division_Code</fullName>
+    <active>true</active>
+    <errorConditionFormula>Match_Membership_Division_Code__c == true &amp;&amp; NOT(ISPICKVAL(Related_Object__c,&apos;ucinn_ascendv2__Society_Membership__c&apos;))</errorConditionFormula>
+    <errorMessage>When Match Membership Division Code is checked, the Related Object must have a value of  Society Membership.</errorMessage>
+</ValidationRule>

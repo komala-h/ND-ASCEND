@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Charge_BEAT_Admin</fullName>
+    <active>true</active>
+    <description>Only BEAT Administrators may select the No Charge payment option. Please choose a different option.</description>
+    <errorConditionFormula>ISCHANGED(Responsible_Payer__c ) = True &amp;&amp;
+TEXT( Responsible_Payer__c ) = &quot;No Charge&quot; &amp;&amp;
+ NOT( $Permission.BEAT_Admin )</errorConditionFormula>
+    <errorMessage>Only BEAT Administrators may select the No Charge payment option. Please choose a different option.</errorMessage>
+</ValidationRule>

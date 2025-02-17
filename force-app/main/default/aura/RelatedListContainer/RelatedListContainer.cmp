@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="relatedListSettingName" type="String" default="ucinn_ascendv2__RelatedList_Relationship"/>
+    <aura:attribute name="overrideNewButtonComponent" type="String"/><!-- default="c:RelationshipRecordModal"/>-->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--<aura:if isTrue="{!v.relatedListSettingName == 'ucinn_ascendv2__RelatedList_Relationship'}">-->
+    <aura:if isTrue="{!v.overrideNewButtonComponent != ''}">
+        <ucinn_ascendv2:RelatedList recordId="{!v.recordId}"
+                                    outsideAscendPackage="true"
+                                    relatedListSettingName="{!v.relatedListSettingName}"
+                                    overrideNewButton="{!v.overrideNewButtonComponent}" />
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.relatedListSettingName != null}" >
+                <ucinn_ascendv2:RelatedList recordId="{!v.recordId}"
+                                            outsideAscendPackage = "true"
+                                            relatedListSettingName="{!v.relatedListSettingName}"/>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+
+</aura:component>

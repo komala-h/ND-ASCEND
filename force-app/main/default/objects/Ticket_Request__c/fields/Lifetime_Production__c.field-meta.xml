@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lifetime_Production__c</fullName>
+    <description>W-001445</description>
+    <formula>IF (ISBLANK (Constituent__c), ROUND( Organization__r.ucinn_ascendv2__Lifetime_Fundraising__c, 0), ROUND(Constituent__r.Account.ucinn_ascendv2__Lifetime_Fundraising__c, 0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lifetime Production</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_Fields_Luxury_Item</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Category__c , &quot;Luxury Items&quot;)
+&amp;&amp;
+ISPICKVAL(Item__c, &quot;&quot;)</errorConditionFormula>
+    <errorDisplayField>Item__c</errorDisplayField>
+    <errorMessage>For a Category of Luxury Items, an Item must be entered.</errorMessage>
+</ValidationRule>

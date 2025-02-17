@@ -1,0 +1,12 @@
+<aura:component controller="asc_BIO_CaseRelatedListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="accountOrContactRecordId" type="String"/>
+    <aura:attribute name="relatedListSettingName" type="String"/>
+    <aura:attribute name="targetLookupField" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <aura:if isTrue="{!and(v.relatedListSettingName != null, v.accountOrContactRecordId != null)}" >
+        <ucinn_ascendv2:RelatedList recordId="{!v.accountOrContactRecordId}" outsideAscendPackage = "true" relatedListSettingName="{!v.relatedListSettingName}"/>
+    </aura:if>
+</aura:component>

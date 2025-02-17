@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Create_Prospect_Note_Notes</name>
+    </customPermissions>
+    <description>Grants users the Custom Permission to Create &quot;Prospect Note&quot; Notes</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.nd_Prospect_Comment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Permission - Create Prospect Note Notes</label>
+</PermissionSet>

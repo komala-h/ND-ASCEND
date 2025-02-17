@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>mtd_extract_to_integration_out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Execute sync of this table to integration out</description>
+    <inlineHelpText>If this field is checked, the talend apex class ND_MDT_Sync called by talend job job_ascend_producer_custom_metadata will copy any changed ids for the table specified by this row and copy them to integration out</inlineHelpText>
+    <label>mtd extract to integration out</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

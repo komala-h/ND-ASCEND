@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Ticket Level</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Ticket Level lookup filter criteria on Ticket Request.  The event and type for the Ticket Level does not match the event and ticket type on the Ticket Request.</errorMessage>
+        <filterItems>
+            <field>Section__c.Event__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Event__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Section__c.Type__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.ND_Ticket_Type__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Section__c</referenceTo>
+    <relationshipLabel>Ticket Requests</relationshipLabel>
+    <relationshipName>Ticket_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

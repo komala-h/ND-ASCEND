@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Change_BEAT_Admin</fullName>
+    <active>true</active>
+    <description>Only BEAT Admins can update the Status to or from Holding, Approved, Assigned, Transferred, or Denied.</description>
+    <errorConditionFormula>AND(
+  ISCHANGED(Status__c),
+  OR(
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Holding&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Approved&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Assigned&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Transferred&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Denied&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(PRIORVALUE(Status__c), &apos;Donor Refused&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Holding&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Approved&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Assigned&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Transferred&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Denied&apos;),
+      NOT($Permission.BEAT_Admin)
+    ),
+    AND(
+      ISPICKVAL(Status__c, &apos;Donor Refused&apos;),
+      NOT($Permission.BEAT_Admin)
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>Only BEAT Admins can update the Status to or from Holding, Donor Refused, Approved, Assigned, Transferred, or Denied.</errorMessage>
+</ValidationRule>

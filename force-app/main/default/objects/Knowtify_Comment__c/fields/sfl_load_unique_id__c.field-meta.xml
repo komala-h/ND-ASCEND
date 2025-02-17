@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sfl_load_unique_id__c</fullName>
+    <description>Used by development&apos;s load process. This field allows the load process to link back the load status and, if applicable, the newly created Salesforce ID. It is not intended to be an external id.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by development&apos;s load process. This field allows the load process to link back the load status and, if applicable, the newly created Salesforce ID. It is not intended to be an external id.</inlineHelpText>
+    <label>sfl load unique id</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

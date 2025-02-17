@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_Note_Type__c</fullName>
+    <label>Note Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AC</fullName>
+                <default>false</default>
+                <label>Advisory Council Note</label>
+            </value>
+            <value>
+                <fullName>PD</fullName>
+                <default>false</default>
+                <label>Proposal Detail Note</label>
+            </value>
+            <value>
+                <fullName>GA</fullName>
+                <default>false</default>
+                <label>Gift Acknowledgement Note</label>
+            </value>
+            <value>
+                <fullName>NP</fullName>
+                <default>false</default>
+                <label>Proposal Note</label>
+            </value>
+            <value>
+                <fullName>SN</fullName>
+                <default>false</default>
+                <label>Strategy Notes</label>
+            </value>
+            <value>
+                <fullName>BB</fullName>
+                <default>false</default>
+                <label>Gift Planning Document</label>
+            </value>
+            <value>
+                <fullName>PG</fullName>
+                <default>false</default>
+                <label>Pledge Communication</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>Prospect Note</label>
+            </value>
+            <value>
+                <fullName>BI</fullName>
+                <default>false</default>
+                <label>Biographical Note</label>
+            </value>
+            <value>
+                <fullName>TC</fullName>
+                <default>false</default>
+                <label>Transformative Gifts Coaching Meeting</label>
+            </value>
+            <value>
+                <fullName>TS</fullName>
+                <default>false</default>
+                <label>Transformative Gifts Strategy Meeting</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3</label>
+            </value>
+            <value>
+                <fullName>AL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Alumni Membership Letter</label>
+            </value>
+            <value>
+                <fullName>AR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Award and Recognition</label>
+            </value>
+            <value>
+                <fullName>BW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BEAT Weekend Comments</label>
+            </value>
+            <value>
+                <fullName>CI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Child Information</label>
+            </value>
+            <value>
+                <fullName>MS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Children&apos;s High School</label>
+            </value>
+            <value>
+                <fullName>DC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DIS Capture</label>
+            </value>
+            <value>
+                <fullName>DN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Death Notice/Obituary</label>
+            </value>
+            <value>
+                <fullName>DO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Development Officer</label>
+            </value>
+            <value>
+                <fullName>DS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Donor Services Note</label>
+            </value>
+            <value>
+                <fullName>DD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Driving Directions</label>
+            </value>
+            <value>
+                <fullName>ME</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Employer Information</label>
+            </value>
+            <value>
+                <fullName>AI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Endowment Image</label>
+            </value>
+            <value>
+                <fullName>ZH</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Engagement/Action to take in FY21</label>
+            </value>
+            <value>
+                <fullName>Engagement/Action to take in FY21</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Engagement/Action to take in FY21</label>
+            </value>
+            <value>
+                <fullName>EC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entity Couple Photo</label>
+            </value>
+            <value>
+                <fullName>EP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entity Individual Photo</label>
+            </value>
+            <value>
+                <fullName>EN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entity Photo Not Available</label>
+            </value>
+            <value>
+                <fullName>EI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Event Information Note</label>
+            </value>
+            <value>
+                <fullName>ZG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>External Influencers</label>
+            </value>
+            <value>
+                <fullName>FI</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FI</label>
+            </value>
+            <value>
+                <fullName>MD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Family members&apos; Deaths</label>
+            </value>
+            <value>
+                <fullName>MF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Financial Outlook</label>
+            </value>
+            <value>
+                <fullName>FB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Football Note</label>
+            </value>
+            <value>
+                <fullName>PC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Freshman Parent Card</label>
+            </value>
+            <value>
+                <fullName>GN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General Reference Note</label>
+            </value>
+            <value>
+                <fullName>GB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gift Agreement</label>
+            </value>
+            <value>
+                <fullName>GP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gift Processing Note</label>
+            </value>
+            <value>
+                <fullName>GG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal/Gifts</label>
+            </value>
+            <value>
+                <fullName>GQ</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal/PG</label>
+            </value>
+            <value>
+                <fullName>GL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal/Pledges</label>
+            </value>
+            <value>
+                <fullName>GT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal/PresC/Gifts</label>
+            </value>
+            <value>
+                <fullName>GC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal/PresC/Pledges</label>
+            </value>
+            <value>
+                <fullName>GV</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal: New Bequest Expectancies Face Value</label>
+            </value>
+            <value>
+                <fullName>GW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal: New Bequest Expectancies Present Value</label>
+            </value>
+            <value>
+                <fullName>GX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal: New Income Producing Gifts Face Value</label>
+            </value>
+            <value>
+                <fullName>GY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal: New Income Producing Gifts Present</label>
+            </value>
+            <value>
+                <fullName>GU</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Goal: Total Contacts</label>
+            </value>
+            <value>
+                <fullName>IN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Idea Note</label>
+            </value>
+            <value>
+                <fullName>ZC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Influencers / Collaborators to involve</label>
+            </value>
+            <value>
+                <fullName>ZF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Key Notre Dame Influencers</label>
+            </value>
+            <value>
+                <fullName>ML</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mailing Note</label>
+            </value>
+            <value>
+                <fullName>MN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Name Pronunciation</label>
+            </value>
+            <value>
+                <fullName>OB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>O&apos;Hara Benefits Note</label>
+            </value>
+            <value>
+                <fullName>MO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Obstacles to Overcome</label>
+            </value>
+            <value>
+                <fullName>OT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Note</label>
+            </value>
+            <value>
+                <fullName>ZD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Personal Milestones to influence timing</label>
+            </value>
+            <value>
+                <fullName>ZA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Philanthropic Areas of Interest</label>
+            </value>
+            <value>
+                <fullName>MA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Political Affiliation</label>
+            </value>
+            <value>
+                <fullName>MP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Preferences</label>
+            </value>
+            <value>
+                <fullName>PS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Principal Stewardship</label>
+            </value>
+            <value>
+                <fullName>PM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect Comment</label>
+            </value>
+            <value>
+                <fullName>PN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prospect Post It Note</label>
+            </value>
+            <value>
+                <fullName>PF</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Purpose of Fund</label>
+            </value>
+            <value>
+                <fullName>R3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Biographic Profile</label>
+            </value>
+            <value>
+                <fullName>R6</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Biographical Profile Report</label>
+            </value>
+            <value>
+                <fullName>R4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Capacity Profile</label>
+            </value>
+            <value>
+                <fullName>R5</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Comprehensive Profile</label>
+            </value>
+            <value>
+                <fullName>R1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Entity Announcement</label>
+            </value>
+            <value>
+                <fullName>RS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Note</label>
+            </value>
+            <value>
+                <fullName>R2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Research Pre-Qualification</label>
+            </value>
+            <value>
+                <fullName>SB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sorin Benefits Note</label>
+            </value>
+            <value>
+                <fullName>SAN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stewardship Allocation Note</label>
+            </value>
+            <value>
+                <fullName>SW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stewardship Note</label>
+            </value>
+            <value>
+                <fullName>ST</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategy</label>
+            </value>
+            <value>
+                <fullName>AB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Strategy Note (Legacy)</label>
+            </value>
+            <value>
+                <fullName>TY</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Thank You Note</label>
+            </value>
+            <value>
+                <fullName>UD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Undergraduate Admissions Declined</label>
+            </value>
+            <value>
+                <fullName>UA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Undergraduate Admissions Note</label>
+            </value>
+            <value>
+                <fullName>UW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Undergraduate Admissions Waitlist</label>
+            </value>
+            <value>
+                <fullName>AA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WARNING</label>
+            </value>
+            <value>
+                <fullName>WS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Wealth Screening</label>
+            </value>
+            <value>
+                <fullName>WX</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WealthEx</label>
+            </value>
+            <value>
+                <fullName>ZB</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>What amount is to be solicited and when?</label>
+            </value>
+            <value>
+                <fullName>ZE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>What are the immediate next steps?</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

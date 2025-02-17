@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>nd_jv_debit_entry__c</fullName>
+    <externalId>false</externalId>
+    <formula>RPAD(&quot;BEAT&quot;, 16, &quot; &quot;) &amp;
+&quot;2FT01&quot; &amp;
+RPAD(RIGHT(Name, 7), 8, &quot; &quot;) &amp;
+RPAD(TEXT(ROUND(Actual_Charge_Amount__c * 100, 0)), 12, &quot; &quot;) &amp;
+RPAD(
+Donor_ID__c &amp; &quot; &quot; &amp;
+CASE(
+    Group__c,
+    &quot;Football&quot;, &quot;FBM &quot;,
+    &quot;Basketball Men&quot;, &quot;BBM &quot;,
+    &quot;Basketball Women&quot;, &quot;BBW &quot;,
+    &quot;Hockey&quot;, &quot;HKY &quot;,
+    &quot;OTH &quot;  
+)&amp;
+
+text(Event_Date__c) &amp; &quot; &quot; &amp;
+CASE(
+    ND_Ticket_Type__c,
+    &quot;Seat&quot;, &quot;TK &quot;,
+    &quot;Parking&quot;, &quot;PK &quot;,
+    &quot;Pregame Pass&quot;, &quot;PP &quot;,
+    &quot;OTH &quot;
+)&amp;
+
+LEFT(Requested_By__r.FirstName, 1) &amp; 
+IF(
+    NOT(ISBLANK(Requested_By__r.MiddleName)), 
+    LEFT(Requested_By__r.MiddleName, 1), 
+    &quot;&quot;
+) &amp; 
+LEFT(Requested_By__r.LastName, 1), 35, &quot; &quot; ) &amp;
+RPAD(&quot;D  1&quot;, 10, &quot; &quot;) &amp;
+RPAD(LEFT(FOAPAL__c, 6), 6, &quot; &quot;) &amp;
+RPAD(MID(FOAPAL__c, 8, 5), 6, &quot; &quot;) &amp;
+RPAD(MID(FOAPAL__c, 14, 5), 6, &quot; &quot;) &amp;
+RPAD(MID(FOAPAL__c, 20, 5), 6, &quot; &quot;) &amp;
+
+IF(LEN(FOAPAL__c) &gt;= 30, RPAD(MID(FOAPAL__c, 26, 5), 6, &quot; &quot;), &quot;&quot;) &amp;
+IF(LEN(FOAPAL__c) &gt;= 31, RPAD(MID(FOAPAL__c, 31, 5), 6, &quot; &quot;), &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>nd jv debit entry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

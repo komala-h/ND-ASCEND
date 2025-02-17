@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Record_When_Denied</fullName>
+    <active>true</active>
+    <description>Only Campaign Administration staff can edit a Nomination if the Status is &apos;Denied&apos;.</description>
+    <errorConditionFormula>AND(
+
+ISPICKVAL( nd_Status__c , &quot;Z&quot;),
+
+NOT(ISNEW()),
+
+NOT(OR(
+
+$Profile.Name = &quot;System Administrator&quot;,
+$Permission.Edit_Campaign_Event_Nomination_Status,
+$User.ND_Bypass_Duplicate_Rules__c = TRUE)
+
+)
+
+)</errorConditionFormula>
+    <errorDisplayField>nd_Status__c</errorDisplayField>
+    <errorMessage>Only Campaign Administration staff can edit a Nomination if the Status is &apos;Denied&apos;.</errorMessage>
+</ValidationRule>
