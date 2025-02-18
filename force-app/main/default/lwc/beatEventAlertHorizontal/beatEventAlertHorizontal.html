@@ -1,0 +1,74 @@
+<!--
+Description: To display Beat Alerts horizontally
+Author: Komala h1
+Created Date : 02/18/2025
+-->
+<template>
+    <div class="spinner">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" size="large">
+            </lightning-spinner>
+        </template>
+    </div>
+
+    <article class="slds-card slds-card_boundary">
+        <div class="slds-card__header slds-grid ">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate slds-grid_align-spread slds-border_bottom">
+                <div class="slds-col slds-grid slds-grid_vertical-align-center ">
+                    <div class="slds-media_small slds-media__figure">
+                        <lightning-icon size="small" icon-name="custom:custom52"></lightning-icon>
+                    </div>
+                    <h2 title="Title">
+                        <b>
+                            <span class="slds-text-heading_small">BEAT Alerts</span>
+                        </b>
+                    </h2>
+                    <template if:true={wiredRecords}>
+                        <template if:true={cmtRecord}>
+                            <div class="slds-var-m-around_small slds-var-p-horizontal_small slds-var-p-top_small slds-var-p-bottom_medium">       
+                                <p>Click on link to reference BEAT Guidelines: <lightning-formatted-url value={cmtRecord.Link__c} label="BEAT Files and Guidelines" target="_blank" ></lightning-formatted-url></p>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                <div class="slds-col">
+                    <lightning-button-icon icon-name="utility:refresh" title="Refresh" onclick={refreshComponent}></lightning-button-icon>
+                </div>
+            </header>
+        </div>
+
+        <div class="slds-card__body slds-card__body_inner">
+            <div class="slds-grid slds-gutters">
+                <template if:true={wiredRecords}>
+                    <template for:each={wiredRecords} for:item="alert">
+                        <div key={alert.id} class="slds-col slds-size_1-of-4 slds-p-around_small slds-border_right " >
+                            <div class="slds-grid slds-align-items-start">
+                                <div class="slds-media__figure slds-m-right_small">
+                                    <lightning-icon size="x-small" icon-name="action:announcement"></lightning-icon>
+                                </div>
+                                <div>
+                                    <template if:true={alert.Event__c}>
+                                        <p class="h1">Event: {alert.Event__r.Name}</p>
+                                    </template>
+                                    <lightning-formatted-rich-text value={alert.Message__c} class="containerWrap"></lightning-formatted-rich-text>
+                                    <a href={alert.recURL} target="_blank" > Continue Reading -></a>
+                                </div>
+                            </div>    
+                        </div>
+                    </template>
+                </template>
+            </div>
+            <lightning-layout class="slds-grid slds-wrap slds-grid_align-spread slds-p-around_small">
+						<lightning-layout-item>
+							<lightning-button label="Previous" 	icon-name="utility:chevronleft"	onclick={previousHandler} disabled={disablePrevious}></lightning-button>
+						</lightning-layout-item>
+						<lightning-layout-item flexibility="grow">
+							<p class="slds-text-align_center">Displaying {currentPage} of {totalPage} Page</p>
+						</lightning-layout-item>
+						<lightning-layout-item>
+							<lightning-button label="Next" 	icon-name="utility:chevronright"	icon-position="right"	onclick={nextHandler}	disabled={disableNext}></lightning-button>
+						</lightning-layout-item>    
+			</lightning-layout>
+        </div>
+    </article>
+</template>
