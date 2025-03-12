@@ -20,7 +20,7 @@ public class ND_massUploadStewardshipAssets {
             list<String> lstCSVLines = data.split('\n');
                        
             Id AssetRecordtypeId = Schema.SObjectType.Asset.getRecordTypeInfosByDeveloperName().get(recordtypeChosen).getRecordTypeId();
-             
+                  
             for(Integer i = 1; i < lstCSVLines.size(); i++){
                 Asset asset = new Asset();
                 String csvLine = lstCSVLines[i];
