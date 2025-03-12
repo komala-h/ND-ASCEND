@@ -45,16 +45,16 @@ public without sharing class CampaignDetailController {
     public static List<SObject> getRecords(String userId, String campaignId, String query, String queryVariables, String dataSourceSubqueryRelationshipName) {
         List<QueryVariable> variableList = (List<QueryVariable>)JSON.deserialize(queryVariables, List<QueryVariable>.class);
         //List<Campaign> campaignList = [Select Id, StartDate, EndDate From Campaign Where Id=:campaignId];
-        List<Campaign> campaignList =[Select Id,Name, StartDate, EndDate, (SELECT Id,Name, StartDate, EndDate FROM ChildCampaigns) From Campaign Where Id=:campaignId OR ParentId = :campaignId];
+        List<Campaign> campaignList =[Select Id,Name, StartDate, EndDate,nd_Time__c, (SELECT Id,Name, StartDate, EndDate,nd_Time__c FROM ChildCampaigns) From Campaign Where Id=:campaignId OR ParentId = :campaignId];
         Map<String, String> replaceMap = new Map<String, String>();
 		 Datetime campaignEndDate;
         replaceMap.put('#userid#', userId);
 
         System.debug('#### campaignId: '+campaignId);
         System.debug('#### campaignList: '+campaignList);
-        for (Campaign c : campaignList) {
+       /* for (Campaign c : campaignList) {
     		System.debug('Campaign: ' + c.Id + ' Name: ' + c.Name + ' StartDate: ' + c.StartDate + ' EndDate: ' + c.EndDate);
-		}
+		}*/
         if (!campaignList.isEmpty()) {
             Campaign cmpgn = campaignList[0];
             Datetime campaignStartDate = DateTime.newInstance(cmpgn.StartDate.year(), cmpgn.StartDate.month(), cmpgn.StartDate.day(), 0, 0, 0);
@@ -63,7 +63,7 @@ public without sharing class CampaignDetailController {
               cmpgn.EndDate = Date.today();
             }
              campaignEndDate = DateTime.newInstance(cmpgn.EndDate.year(), cmpgn.EndDate.month(), cmpgn.EndDate.day(), 0, 0, 0);
-           
+
             replaceMap.put('#campaignid#', campaignId);
             replaceMap.put('#campaign__startdate#', campaignStartDate.format('yyyy-MM-dd'));
             replaceMap.put('#campaign__startdate__day#', String.valueOf(campaignStartDate.day()));
@@ -73,7 +73,7 @@ public without sharing class CampaignDetailController {
             replaceMap.put('#campaign__enddate__day#', String.valueOf(campaignEndDate.day()));
             replaceMap.put('#campaign__enddate__month#', String.valueOf(campaignEndDate.month()));
             replaceMap.put('#campaign__enddate__year#', String.valueOf(campaignEndDate.year()));
-
+		      
             for (Integer i = 1; i <= 30; i++) {
                 replaceMap.put('#campaign__startdate__addday:' + String.valueOf(-i) + '#', campaignStartDate.addDays(-i).format('yyyy-MM-dd'));
                 replaceMap.put('#campaign__startdate__addday:' + String.valueOf(i) + '#', campaignStartDate.addDays(i).format('yyyy-MM-dd'));
@@ -151,6 +151,16 @@ public without sharing class CampaignDetailController {
 
             for (SObject main : Database.query(query)) {
                 for (Sobject sub : main.getSObjects(dataSourceSubqueryRelationshipName)) {
+             /*if (sub.get('nd_Time__c') != null) {
+                Time childCampaignTime = (Time) sub.get('nd_Time__c');
+                String formattedMinute = (childCampaignTime.minute() < 10) ? '0' + String.valueOf(childCampaignTime.minute()) : String.valueOf(childCampaignTime.minute());
+                String formattedTime = String.valueOf(childCampaignTime.hour()) + '-' + formattedMinute;
+               // sub.put('nd_Time__c', formattedTime);  
+                System.debug('#### Child campaign__time: ' + formattedTime);
+            } else {
+                  System.debug('#### Child campaign__time:else ' +  '00-00');
+                //sub.put('nd_Time__c', '00:00:00'); 
+            }*/
                     sublist.add(sub);
                 }
             }
