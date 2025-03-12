@@ -2,7 +2,7 @@
  * Description: This class is to batch upload Stewardship Assets
  * This Class is called from LWC Component 'massUploadStewardshipAssets'
  * This class parses the data in csv to create Stewardship Asset records and passes them to batch class ND_massUploadStewardshipAssetsBatch
- * Author: Komala H @Cube84
+ * Author: Komala H @Cube84 
  *  
  * 
  */
@@ -63,6 +63,7 @@ public class ND_massUploadStewardshipAssets {
                     else{
                         asset.nd_Date__c = null;
                     }
+                    
                 }
                 else if(recortypeName=='Membership_Benefit'){
                     asset.recordTypeId = AssetRecordtypeId;
